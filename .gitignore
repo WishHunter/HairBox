@@ -6,10 +6,12 @@
 .idea
 .vscode
 .github
+.gitignore
 .env
 ehthumbs.db
 Thumbs.db
 node_modules
-dist
+design
+README.md
 yarn.lock
 package-lock.json

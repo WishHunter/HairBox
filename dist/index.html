@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HairBox</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,500,700,900&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <div class="header__logo">
+            <picture>
+              <source srcset="./img/logo.webp" type="image/webp"/><img class="logo" src="./img/logo.png"/>
+            </picture>
+          </div>
+          <div class="header__menu">
+            <ul class="list list--header">
+              <li class="list__item">
+                <picture>
+                  <source srcset="./img/icons/catalog.webp" type="image/webp"/><img class="list__icon" src="./img/icons/catalog.png"/>
+                </picture><a class="list__link js-sublist" href="#catalog-list">Каталог</a>
+                <ul class="list__sublist" id="catalog-list">
+                  <li class="list__item"><a class="list__link" href="#">Все товары</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Sale</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Волосы</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Тело</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Лицо</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Аксессуары</a></li>
+                </ul>
+              </li>
+              <li class="list__item">
+                <picture>
+                  <source srcset="./img/icons/user.webp" type="image/webp"/><img class="list__icon" src="./img/icons/user.png"/>
+                </picture><a class="list__link" href="#">Личный кабинет</a>
+              </li>
+              <li class="list__item">
+                <picture>
+                  <source srcset="./img/icons/help.webp" type="image/webp"/><img class="list__icon" src="./img/icons/help.png"/>
+                </picture><a class="list__link" href="#">Помощь</a>
+              </li>
+              <li class="list__item">
+                <picture>
+                  <source srcset="./img/icons/contact.webp" type="image/webp"/><img class="list__icon" src="./img/icons/contact.png"/>
+                </picture><a class="list__link" href="#">Контакты</a>
+              </li>
+              <li class="list__item">
+                <picture>
+                  <source srcset="./img/icons/info.webp" type="image/webp"/><img class="list__icon" src="./img/icons/info.png"/>
+                </picture><a class="list__link" href="#">О нас</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__icons">
+            <ul class="list list--icons">
+              <li class="list__item"><a class="list__link" href="#">
+                  <picture>
+                    <source srcset="./img//icons/search.webp" type="image/webp"/><img class="list__icon" src="./img//icons/search.png"/>
+                  </picture></a></li>
+              <li class="list__item"><a class="list__link js-openPopup" href="#user-popup">
+                  <picture>
+                    <source srcset="./img//icons/user.webp" type="image/webp"/><img class="list__icon" src="./img//icons/user.png"/>
+                  </picture></a></li>
+              <li class="list__item"><a class="list__link js-openPopup" href="#favorites-popup">
+                  <picture>
+                    <source srcset="./img//icons/favorites.webp" type="image/webp"/><img class="list__icon" src="./img//icons/favorites.png"/>
+                  </picture></a></li>
+              <li class="list__item"><a class="list__link js-dots" href="#">
+                  <picture>
+                    <source srcset="./img//icons/basket.webp" type="image/webp"/><img class="list__icon" src="./img//icons/basket.png"/>
+                  </picture>
+                  <div class="list__dot">3</div></a></li>
+              <li class="list__item desktop-hidden"><a class="burger list__burger js-mobMenu" href="#"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero__slider">
+        <div class="hero__slide">
+          <div class="hero__bg">
+            <div class="container hero__container">
+              <div class="hero__content">
+                <div class="hero__title">Новый путь к красоте волос</div>
+                <div class="hero__desc">Профессиональный уход у тебя дома</div><a class="hero__btn" href="#">Получить консультацию</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="navigation">
+      <div class="container">
+        <div class="navigation__content"><a class="navigation__list navigation__list--all" href="#">
+            <div class="navigation__text">Все товары</div></a><a class="navigation__list navigation__list--hair" href="#">
+            <div class="navigation__text">Волосы</div></a><a class="navigation__list navigation__list--body" href="#">
+            <div class="navigation__text">Тело</div></a><a class="navigation__list navigation__list--sale" href="#">
+            <div class="navigation__text">Sale</div></a><a class="navigation__list navigation__list--accessories" href="#">
+            <div class="navigation__text">Аксессуары</div></a><a class="navigation__list navigation__list--face" href="#">
+            <div class="navigation__text">Лицо</div></a></div>
+      </div>
+    </section>
+    <section class="newProd">
+      <div class="container">
+        <h2 class="newProd__title">Новые продукты</h2>
+        <div class="newProd__content">
+          <div class="newProd__prod prod"><a class="prod__link" href="#">
+              <div class="prod__photo-block">
+                <picture>
+                  <source srcset="./img/product1.webp" type="image/webp"/><img class="prod__photo" src="./img/product1.png"/>
+                </picture>
+              </div>
+              <p class="prod__title">Lorem, ipsum dolor.</p>
+              <p class="prod__desc">Lorem ipsum dolor sit amet.</p>
+              <div class="prod__price">
+                <p class="prod__new-price">1340.00 руб.</p>
+              </div></a><a class="prod__btn" href="#">В корзину</a><a class="prod__favorites" href="#">
+              <picture>
+                <source srcset="./img/icons/favorites.webp" type="image/webp"/><img class="prod__icon" src="./img/icons/favorites.png"/>
+              </picture></a></div>
+          <div class="newProd__prod prod"><a class="prod__link" href="#">
+              <div class="prod__photo-block">
+                <picture>
+                  <source srcset="./img/product1.webp" type="image/webp"/><img class="prod__photo" src="./img/product1.png"/>
+                </picture>
+              </div>
+              <p class="prod__title">Lorem, ipsum dolor.</p>
+              <p class="prod__desc">Lorem ipsum dolor sit amet.</p>
+              <div class="prod__price">
+                <p class="prod__new-price">1340.00 руб.</p>
+              </div></a><a class="prod__btn" href="#">В корзину</a><a class="prod__favorites" href="#">
+              <picture>
+                <source srcset="./img/icons/favorites.webp" type="image/webp"/><img class="prod__icon" src="./img/icons/favorites.png"/>
+              </picture></a></div>
+          <div class="newProd__prod prod"><a class="prod__link" href="#">
+              <div class="prod__photo-block">
+                <picture>
+                  <source srcset="./img/product1.webp" type="image/webp"/><img class="prod__photo" src="./img/product1.png"/>
+                </picture>
+              </div>
+              <p class="prod__title">Lorem, ipsum dolor.</p>
+              <p class="prod__desc">Lorem ipsum dolor sit amet.</p>
+              <div class="prod__price">
+                <p class="prod__new-price">1340.00 руб.</p>
+              </div></a><a class="prod__btn" href="#">В корзину</a><a class="prod__favorites" href="#">
+              <picture>
+                <source srcset="./img/icons/favorites.webp" type="image/webp"/><img class="prod__icon" src="./img/icons/favorites.png"/>
+              </picture></a></div>
+          <div class="newProd__prod prod"><a class="prod__link" href="#">
+              <div class="prod__photo-block">
+                <picture>
+                  <source srcset="./img/product1.webp" type="image/webp"/><img class="prod__photo" src="./img/product1.png"/>
+                </picture>
+              </div>
+              <p class="prod__title">Lorem, ipsum dolor.</p>
+              <p class="prod__desc">Lorem ipsum dolor sit amet.</p>
+              <div class="prod__price">
+                <p class="prod__new-price">1340.00 руб.</p>
+              </div></a><a class="prod__btn" href="#">В корзину</a><a class="prod__favorites" href="#">
+              <picture>
+                <source srcset="./img/icons/favorites.webp" type="image/webp"/><img class="prod__icon" src="./img/icons/favorites.png"/>
+              </picture></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="banner">
+      <div class="container">
+        <h3 class="banner__desc">Lorem, ipsum dolor</h3>
+        <h2 class="banner__title">Lorem, ipsum dolor</h2>
+        <h3 class="banner__desc">Lorem, ipsum dolor</h3><a class="banner__btn" href="#">Заказать</a>
+      </div>
+    </section>
+    <section class="specialOffer">
+      <div class="container">
+        <h2 class="specialOffer__title">Специальное предложение</h2>
+        <ul class="specialOffer__tabs">
+          <li class="specialOffer__tab"><a class="specialOffer__tab-link" href="#">Все товары</a></li>
+          <li class="specialOffer__tab"><a class="specialOffer__tab-link" href="#">Волосы</a></li>
+          <li class="specialOffer__tab"><a class="specialOffer__tab-link" href="#">Тело</a></li>
+          <li class="specialOffer__tab"><a class="specialOffer__tab-link" href="#">Лицо</a></li>
+          <li class="specialOffer__tab"><a class="specialOffer__tab-link" href="#">Аксессуары</a></li>
+        </ul>
+        <div class="specialOffer__products">
+          <div class="specialOffer__prod prod"><a class="prod__link" href="#">
+              <p class="prod__sticker prod__sticker--sale">sale</p>
+              <div class="prod__photo-block">
+                <picture>
+                  <source srcset="./img/product1.webp" type="image/webp"/><img class="prod__photo" src="./img/product1.png"/>
+                </picture>
+              </div>
+              <p class="prod__title">Lorem, ipsum dolor.</p>
+              <p class="prod__desc">Lorem ipsum dolor sit amet.</p>
+              <div class="prod__price">
+                <p class="prod__old-price">1341.00 руб.</p>
+                <p class="prod__new-price">1340.00 руб.</p>
+              </div></a><a class="prod__btn" href="#">В корзину</a><a class="prod__favorites" href="#">
+              <picture>
+                <source srcset="./img/icons/favorites.webp" type="image/webp"/><img class="prod__icon" src="./img/icons/favorites.png"/>
+              </picture></a></div>
+          <div class="specialOffer__prod prod"><a class="prod__link" href="#">
+              <p class="prod__sticker prod__sticker--sale">sale</p>
+              <div class="prod__photo-block">
+                <picture>
+                  <source srcset="./img/product1.webp" type="image/webp"/><img class="prod__photo" src="./img/product1.png"/>
+                </picture>
+              </div>
+              <p class="prod__title">Lorem, ipsum dolor.</p>
+              <p class="prod__desc">Lorem ipsum dolor sit amet.</p>
+              <div class="prod__price">
+                <p class="prod__old-price">1341.00 руб.</p>
+                <p class="prod__new-price">1340.00 руб.</p>
+              </div></a><a class="prod__btn" href="#">В корзину</a><a class="prod__favorites" href="#">
+              <picture>
+                <source srcset="./img/icons/favorites.webp" type="image/webp"/><img class="prod__icon" src="./img/icons/favorites.png"/>
+              </picture></a></div>
+          <div class="specialOffer__prod prod"><a class="prod__link" href="#">
+              <p class="prod__sticker prod__sticker--sale">sale</p>
+              <div class="prod__photo-block">
+                <picture>
+                  <source srcset="./img/product1.webp" type="image/webp"/><img class="prod__photo" src="./img/product1.png"/>
+                </picture>
+              </div>
+              <p class="prod__title">Lorem, ipsum dolor.</p>
+              <p class="prod__desc">Lorem ipsum dolor sit amet.</p>
+              <div class="prod__price">
+                <p class="prod__old-price">1341.00 руб.</p>
+                <p class="prod__new-price">1340.00 руб.</p>
+              </div></a><a class="prod__btn" href="#">В корзину</a><a class="prod__favorites" href="#">
+              <picture>
+                <source srcset="./img/icons/favorites.webp" type="image/webp"/><img class="prod__icon" src="./img/icons/favorites.png"/>
+              </picture></a></div>
+          <div class="specialOffer__prod prod"><a class="prod__link" href="#">
+              <p class="prod__sticker prod__sticker--sale">sale</p>
+              <div class="prod__photo-block">
+                <picture>
+                  <source srcset="./img/product1.webp" type="image/webp"/><img class="prod__photo" src="./img/product1.png"/>
+                </picture>
+              </div>
+              <p class="prod__title">Lorem, ipsum dolor.</p>
+              <p class="prod__desc">Lorem ipsum dolor sit amet.</p>
+              <div class="prod__price">
+                <p class="prod__old-price">1341.00 руб.</p>
+                <p class="prod__new-price">1340.00 руб.</p>
+              </div></a><a class="prod__btn" href="#">В корзину</a><a class="prod__favorites" href="#">
+              <picture>
+                <source srcset="./img/icons/favorites.webp" type="image/webp"/><img class="prod__icon" src="./img/icons/favorites.png"/>
+              </picture></a></div>
+          <div class="specialOffer__prod prod"><a class="prod__link" href="#">
+              <p class="prod__sticker prod__sticker--sale">sale</p>
+              <div class="prod__photo-block">
+                <picture>
+                  <source srcset="./img/product1.webp" type="image/webp"/><img class="prod__photo" src="./img/product1.png"/>
+                </picture>
+              </div>
+              <p class="prod__title">Lorem, ipsum dolor.</p>
+              <p class="prod__desc">Lorem ipsum dolor sit amet.</p>
+              <div class="prod__price">
+                <p class="prod__old-price">1341.00 руб.</p>
+                <p class="prod__new-price">1340.00 руб.</p>
+              </div></a><a class="prod__btn" href="#">В корзину</a><a class="prod__favorites" href="#">
+              <picture>
+                <source srcset="./img/icons/favorites.webp" type="image/webp"/><img class="prod__icon" src="./img/icons/favorites.png"/>
+              </picture></a></div>
+          <div class="specialOffer__prod prod"><a class="prod__link" href="#">
+              <p class="prod__sticker prod__sticker--sale">sale</p>
+              <div class="prod__photo-block">
+                <picture>
+                  <source srcset="./img/product1.webp" type="image/webp"/><img class="prod__photo" src="./img/product1.png"/>
+                </picture>
+              </div>
+              <p class="prod__title">Lorem, ipsum dolor.</p>
+              <p class="prod__desc">Lorem ipsum dolor sit amet.</p>
+              <div class="prod__price">
+                <p class="prod__old-price">1341.00 руб.</p>
+                <p class="prod__new-price">1340.00 руб.</p>
+              </div></a><a class="prod__btn" href="#">В корзину</a><a class="prod__favorites" href="#">
+              <picture>
+                <source srcset="./img/icons/favorites.webp" type="image/webp"/><img class="prod__icon" src="./img/icons/favorites.png"/>
+              </picture></a></div>
+          <div class="specialOffer__prod prod"><a class="prod__link" href="#">
+              <p class="prod__sticker prod__sticker--sale">sale</p>
+              <div class="prod__photo-block">
+                <picture>
+                  <source srcset="./img/product1.webp" type="image/webp"/><img class="prod__photo" src="./img/product1.png"/>
+                </picture>
+              </div>
+              <p class="prod__title">Lorem, ipsum dolor.</p>
+              <p class="prod__desc">Lorem ipsum dolor sit amet.</p>
+              <div class="prod__price">
+                <p class="prod__old-price">1341.00 руб.</p>
+                <p class="prod__new-price">1340.00 руб.</p>
+              </div></a><a class="prod__btn" href="#">В корзину</a><a class="prod__favorites" href="#">
+              <picture>
+                <source srcset="./img/icons/favorites.webp" type="image/webp"/><img class="prod__icon" src="./img/icons/favorites.png"/>
+              </picture></a></div>
+          <div class="specialOffer__prod prod"><a class="prod__link" href="#">
+              <p class="prod__sticker prod__sticker--sale">sale</p>
+              <div class="prod__photo-block">
+                <picture>
+                  <source srcset="./img/product1.webp" type="image/webp"/><img class="prod__photo" src="./img/product1.png"/>
+                </picture>
+              </div>
+              <p class="prod__title">Lorem, ipsum dolor.</p>
+              <p class="prod__desc">Lorem ipsum dolor sit amet.</p>
+              <div class="prod__price">
+                <p class="prod__old-price">1341.00 руб.</p>
+                <p class="prod__new-price">1340.00 руб.</p>
+              </div></a><a class="prod__btn" href="#">В корзину</a><a class="prod__favorites" href="#">
+              <picture>
+                <source srcset="./img/icons/favorites.webp" type="image/webp"/><img class="prod__icon" src="./img/icons/favorites.png"/>
+              </picture></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="callback-small">
+      <div class="container">
+        <div class="callback-small__text">
+          <h3 class="callback-small__title">Не нашли свой любимый бренд?</h3>
+          <p class="callback-small__desc">Напишите нам и мы постараемся включить его в ассортимент как можно скорее</p>
+        </div>
+        <div class="callback-small__form">
+          <textarea class="callback-small__input" name="" rows="1" placeholder="Ваше сообщение..."></textarea><a class="callback-small__btn" href="#">Отправить</a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__col">
+            <ul class="footer__list footer__catalog">
+              <li class="footer__item"><a class="footer__link" href="#">Все товары</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Sale</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Волосы</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Тело</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Лицо</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Аксессуары</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <ul class="footer__list footer__menu">
+              <li class="footer__item"><a class="footer__link" href="#">Каталог</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Личный кабинет</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Помощь</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">О нас</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <ul class="footer__list footer__social">
+              <li class="footer__item">
+                <p class="footer__link footer__title">Контакты:</p>
+              </li>
+              <li class="footer__item"><a class="footer__link footer__number" href="#">+7 (915) 826-27-00</a></li>
+              <li class="footer__item"><a class="footer__link footer__email" href="#">hairproductsdb@gmail.com</a></li>
+              <li class="footer__item footer__grid"><a class="footer__link footer__soc-link" href="#">
+                  <picture>
+                    <source srcset="./img/icons/inst.webp" type="image/webp"/><img class="footer__soc-icon" src="./img/icons/inst.png"/>
+                  </picture></a><a class="footer__link footer__soc-link" href="#">
+                  <picture>
+                    <source srcset="./img/icons/vk.webp" type="image/webp"/><img class="footer__soc-icon" src="./img/icons/vk.png"/>
+                  </picture></a><a class="footer__link footer__soc-link" href="#">
+                  <picture>
+                    <source srcset="./img/icons/youtube.webp" type="image/webp"/><img class="footer__soc-icon" src="./img/icons/youtube.png"/>
+                  </picture></a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/vendor.js"></script>
+  </body>
+</html>
