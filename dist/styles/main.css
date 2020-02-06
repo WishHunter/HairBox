@@ -450,6 +450,10 @@ h2:after {
   display: none;
 }
 
+.desktop-only {
+  display: block;
+}
+
 .burger {
   position: relative;
   display: block;
@@ -503,6 +507,11 @@ h2:after {
   list-style-type: none;
 }
 
+.list__item {
+  position: relative;
+  height: 100%;
+}
+
 .list__link {
   transition-property: color;
   transition-duration: .4s;
@@ -532,6 +541,44 @@ h2:after {
 
 .list__link:hover:before {
   width: calc(100% - 20px);
+}
+
+.list__input {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.list__search {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  padding: 0 10px;
+  transform: translateY(-50%);
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+  opacity: 0;
+  transition-property: width, box-shadow, opacity;
+  transition-duration: .4s;
+}
+
+.list__search:hover {
+  box-shadow: 0 0 10px 0.5px #fcd1d5;
+}
+
+.list__search:focus {
+  z-index: 0;
+  width: 300px;
+  cursor: text;
+  box-shadow: 0 0 10px 0.5px #fcd1d5;
+  outline: none;
+  background-color: #fff;
+  opacity: 1;
 }
 
 .list__sublist {
@@ -683,7 +730,6 @@ h2:after {
   text-align: center;
   text-decoration: none;
   font-weight: 900;
-  text-transform: uppercase;
   margin-top: 16px;
   color: #fff;
   padding: 12px;
@@ -811,7 +857,6 @@ h2:after {
   padding: 15px 20px;
   font-size: 16px;
   text-decoration: none;
-  text-transform: uppercase;
   box-shadow: 0 0 10px 0.5px #fcd1d5;
 }
 
@@ -1011,7 +1056,6 @@ h2:after {
   text-align: center;
   text-decoration: none;
   font-weight: 900;
-  text-transform: uppercase;
   margin-top: 16px;
   color: #fff;
   padding: 12px;
@@ -1078,7 +1122,6 @@ h2:after {
   padding: 15px 20px;
   font-size: 16px;
   text-decoration: none;
-  text-transform: uppercase;
   box-shadow: 0 0 10px 0.5px #fcd1d5;
 }
 
@@ -1175,7 +1218,6 @@ h2:after {
   font-size: 16px;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 .callback-small__btn:hover {
@@ -1191,6 +1233,44 @@ h2:after {
 
   .desktop-hidden {
     display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .list__input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .list__search {
+    display: inline-block;
+    order: 1;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: auto;
+    max-width: 180px;
+    height: 20px;
+    margin: 10px;
+    border: 1px solid #000;
+    transform: none;
+    opacity: .2;
+    border-radius: 0;
+    cursor: text;
+    font-size: 12px;
+  }
+
+  .list__search:hover {
+    box-shadow: none;
+  }
+
+  .list__search:focus {
+    box-shadow: none;
+    width: auto;
   }
 
   .list--header {
@@ -1246,7 +1326,7 @@ h2:after {
 
 @media (max-width: 768px) {
   body {
-    padding-top: 85px;
+    padding-top: 105px;
   }
 
   .container {
@@ -1254,8 +1334,15 @@ h2:after {
     padding: 0 10px;
   }
 
+  .list__search {
+    min-width: 240px;
+    max-width: 240px;
+    height: 30px;
+    font-size: 16px;
+  }
+
   .list--header {
-    height: 100%;
+    height: calc(100% - 100px);
   }
 
   .header {

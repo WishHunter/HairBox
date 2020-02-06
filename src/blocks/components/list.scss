@@ -6,6 +6,11 @@
   padding: 0;
   list-style-type: none;
 
+  &__item {
+    position: relative;
+    height: 100%;
+  }
+
   &__link {
     @include transition(color);
     display: inline-block;
@@ -31,6 +36,84 @@
 
       &:before {
         width: calc(100% - 20px);
+      }
+    }
+  }
+
+  &__input {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__search {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    padding: 0 10px;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    background: none;
+    cursor: pointer;
+    opacity: 0;
+    @include transition(width, box-shadow, opacity)
+
+    @include tablet {
+      display: inline-block;
+      order: 1;
+      position: relative;
+      top: 0;
+      right: 0;
+      width: auto;
+      max-width: 180px;
+      height: 20px;
+      margin: 10px;
+      border: 1px solid #000;
+      transform: none;
+      opacity: .2;
+      border-radius: 0;
+      cursor: text;
+      font-size: 12px;
+    }
+
+    @include mobile {
+      min-width: 240px;
+      max-width: 240px;
+      height: 30px;
+      font-size: 16px;
+    }
+
+    &:hover {
+      box-shadow: 0 0 10px .5px rgba($color-m, 1);
+
+      @include tablet {
+        box-shadow: none;
+      }
+    }
+
+    &:focus {
+      z-index: 0;
+      width: 300px;
+      cursor: text;
+      box-shadow: 0 0 10px .5px rgba($color-m, 1);
+      outline: none;
+      background-color: #fff;
+      opacity: 1;
+
+      @include tablet {
+        box-shadow: none;
+        width: auto;
       }
     }
   }
@@ -115,7 +198,7 @@
     }
 
     @include mobile {
-      height: 100%;
+      height: calc(100% - 100px);
     }
 
     .list__link {

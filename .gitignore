@@ -1,3 +1,5 @@
+package-lock.json
+design
 .DS_Store
 .DS_Store?
 ._*
@@ -13,5 +15,3 @@ Thumbs.db
 node_modules
 README.md
 yarn.lock
-package-lock.json
-design

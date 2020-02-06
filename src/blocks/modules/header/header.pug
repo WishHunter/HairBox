@@ -34,10 +34,15 @@ mixin header()
             li.list__item
               +img('icons/info.png', 'list__icon')
               a.list__link(href="#") О нас
+            li.list__item.desktop-hidden
+              .list__input
+                input.list__search(type="text" placeholder="Поиск...")
+                +img('/icons/search.png', 'list__icon')
         .header__icons
           ul.list.list--icons
-            li.list__item
-              a.list__link(href="#")
+            li.list__item.desktop-only
+              .list__input
+                input.list__search(type="text" placeholder="Поиск...")
                 +img('/icons/search.png', 'list__icon')
             li.list__item
               a.list__link.js-openPopup(href="#user-popup")

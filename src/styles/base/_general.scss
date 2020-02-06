@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6, ul {
 
 body {
   @include mobile {
-    padding-top: 85px;
+    padding-top: 105px;
   }
 }
 
@@ -72,6 +72,13 @@ h2 {
   display: none;
   @include tablet {
     display: block;
+  }
+}
+
+.desktop-only {
+  display: block;
+  @include tablet {
+    display: none;
   }
 }
 

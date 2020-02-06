@@ -70,14 +70,26 @@
                   <source srcset="./img/icons/info.webp" type="image/webp"/><img class="list__icon" src="./img/icons/info.png"/>
                 </picture><a class="list__link" href="#">О нас</a>
               </li>
+              <li class="list__item desktop-hidden">
+                <div class="list__input">
+                  <input class="list__search" type="text" placeholder="Поиск..."/>
+                  <picture>
+                    <source srcset="./img//icons/search.webp" type="image/webp"/><img class="list__icon" src="./img//icons/search.png"/>
+                  </picture>
+                </div>
+              </li>
             </ul>
           </div>
           <div class="header__icons">
             <ul class="list list--icons">
-              <li class="list__item"><a class="list__link" href="#">
+              <li class="list__item desktop-only">
+                <div class="list__input">
+                  <input class="list__search" type="text" placeholder="Поиск..."/>
                   <picture>
                     <source srcset="./img//icons/search.webp" type="image/webp"/><img class="list__icon" src="./img//icons/search.png"/>
-                  </picture></a></li>
+                  </picture>
+                </div>
+              </li>
               <li class="list__item"><a class="list__link js-openPopup" href="#user-popup">
                   <picture>
                     <source srcset="./img//icons/user.webp" type="image/webp"/><img class="list__icon" src="./img//icons/user.png"/>
