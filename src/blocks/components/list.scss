@@ -48,8 +48,25 @@
     @include tablet {
       display: flex;
       align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: auto;
+      height: 50px;
+
+      .list__icon {
+        margin-left: 10px;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        width: 90%;
+        height: 1px;
+        background-color: #f3f3f3;
+      }
     }
   }
 
@@ -70,28 +87,20 @@
     @include transition(width, box-shadow, opacity)
 
     @include tablet {
-      display: inline-block;
-      order: 1;
-      position: relative;
+      position: absolute;
       top: 0;
-      right: 0;
-      width: auto;
-      max-width: 180px;
-      height: 20px;
-      margin: 10px;
-      border: 1px solid #000;
+      left: 0;
+      width: 100%;
+      max-width: none;
+      height: 100%;
+      margin: 0;
+      font-size: 16px;
+      border: none;
+      padding-left: 50px;
       transform: none;
       opacity: .2;
       border-radius: 0;
       cursor: text;
-      font-size: 12px;
-    }
-
-    @include mobile {
-      min-width: 240px;
-      max-width: 240px;
-      height: 30px;
-      font-size: 16px;
     }
 
     &:hover {
@@ -104,7 +113,7 @@
 
     &:focus {
       z-index: 0;
-      width: 300px;
+      width: 700px;
       cursor: text;
       box-shadow: 0 0 10px .5px rgba($color-m, 1);
       outline: none;
@@ -178,14 +187,16 @@
   }
 
   &--header {
+
     @include tablet {
       flex-direction: column;
       align-items: flex-start;
       z-index: 10;
+      height: calc(100% - 100px);
       margin: 0;
       padding: 20px;
       background-color: #fff;
-
+      padding-top: 50px;
       &:before {
         content: "";
         position: absolute;
@@ -197,14 +208,19 @@
       }
     }
 
-    @include mobile {
-      height: calc(100% - 100px);
-    }
-
     .list__link {
       @include tablet {
         font-weight: 900;
       }
+    }
+
+    .list__item {
+      @include tablet {
+        position: static;
+        height: auto;
+        margin: 10px -10px;
+      }
+
     }
 
     .list__icon {
@@ -212,6 +228,7 @@
       @include tablet {
         display: inline-block;
         vertical-align: middle;
+        margin-right: 10px;
       }
     }
 

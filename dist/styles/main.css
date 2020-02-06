@@ -573,7 +573,7 @@ h2:after {
 
 .list__search:focus {
   z-index: 0;
-  width: 300px;
+  width: 700px;
   cursor: text;
   box-shadow: 0 0 10px 0.5px #fcd1d5;
   outline: none;
@@ -750,6 +750,7 @@ h2:after {
 
 .header {
   position: relative;
+  z-index: 10;
   background-color: #fff;
   padding: 20px 0;
 }
@@ -821,48 +822,9 @@ h2:after {
   width: 100%;
   height: 430px;
   background-image: url("../img/banner.jpg");
+  background-image: url("https://psv4.userapi.com/c856324/u7161674/docs/d17/3e45e235cd03/banner_glavnaya.jpg?extra=_oKKOXKkXes6PpSCHyLr0bwvRxowrWGRh2FZzhBzhRyhHOUson5dgen0dwgz5TeH0pTPdyqdHDMT68_BJLhBlDms-BvRl1P9NePRePdwI60LdlN3HzTTTr_7qhhEXwwyFJqUyifIOBai-U_TWHxiagw");
   background-size: cover;
   background-position: center center;
-}
-
-.hero__container {
-  position: relative;
-  height: 100%;
-}
-
-.hero__content {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.hero__title {
-  font-size: 30px;
-  font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.hero__desc {
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-
-.hero__btn {
-  transition-property: background-color, color;
-  transition-duration: .4s;
-  background-color: #fff;
-  padding: 15px 20px;
-  font-size: 16px;
-  text-decoration: none;
-  box-shadow: 0 0 10px 0.5px #fcd1d5;
-}
-
-.hero__btn:hover {
-  background-color: #fcd1d5;
-  color: #fff;
 }
 
 .navigation__content {
@@ -984,7 +946,6 @@ h2:after {
   width: calc(100% - 64px);
   padding: 16px 0;
   background-color: #fff;
-  text-transform: uppercase;
   text-align: center;
   transform: translate(-50%, -50%);
 }
@@ -1075,59 +1036,11 @@ h2:after {
 }
 
 .banner {
-  background-image: url("../img/banner2.jpg");
+  background-image: url("https://psv4.userapi.com/c856324/u7161674/docs/d9/ebf1d2481457/banner_glavnaya_2.jpg?extra=nCVabQ7c3Z6saehN0COvUNG0e7uHQDUaEhbVW60kEgM6Uc6-2af_RpGUtTF206NLMvnx2TyklgIaNgERQiQe1-xMxcx3nI9oyZv3hYn-jTspsYjSh7xkVguxZlIN2zlbLXOUgimtqGtDUoSNAkDrk_w");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  text-align: center;
-  padding: 64px 0;
-}
-
-.banner__desc {
-  color: #ffffff;
-  text-transform: uppercase;
-  font-size: 21px;
-  line-height: 1;
-  margin-bottom: 14px;
-}
-
-.banner__title {
-  position: relative;
-  font-size: 40px;
-  font-family: Montserrat, sans-serif;
-  color: #ffffff;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-.banner__title:after {
-  content: "";
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 50%;
-  width: 120px;
-  height: 1px;
-  transform: translateX(-50%);
-  background-color: #fff;
-}
-
-.banner__btn {
-  transition-property: background-color, color;
-  transition-duration: .4s;
-  display: inline-block;
-  background-color: #fff;
-  min-width: 230px;
-  margin-top: 25px;
-  padding: 15px 20px;
-  font-size: 16px;
-  text-decoration: none;
-  box-shadow: 0 0 10px 0.5px #fcd1d5;
-}
-
-.banner__btn:hover {
-  background-color: #fcd1d5;
-  color: #fff;
+  height: 318px;
 }
 
 .specialOffer {
@@ -1242,26 +1155,42 @@ h2:after {
   .list__input {
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 50px;
+  }
+
+  .list__input .list__icon {
+    margin-left: 10px;
+  }
+
+  .list__input:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 1px;
+    background-color: #f3f3f3;
   }
 
   .list__search {
-    display: inline-block;
-    order: 1;
-    position: relative;
+    position: absolute;
     top: 0;
-    right: 0;
-    width: auto;
-    max-width: 180px;
-    height: 20px;
-    margin: 10px;
-    border: 1px solid #000;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    border: none;
+    padding-left: 50px;
     transform: none;
     opacity: .2;
     border-radius: 0;
     cursor: text;
-    font-size: 12px;
   }
 
   .list__search:hover {
@@ -1277,9 +1206,11 @@ h2:after {
     flex-direction: column;
     align-items: flex-start;
     z-index: 10;
+    height: calc(100% - 100px);
     margin: 0;
     padding: 20px;
     background-color: #fff;
+    padding-top: 50px;
   }
 
   .list--header:before {
@@ -1296,9 +1227,16 @@ h2:after {
     font-weight: 900;
   }
 
+  .list--header .list__item {
+    position: static;
+    height: auto;
+    margin: 10px -10px;
+  }
+
   .list--header .list__icon {
     display: inline-block;
     vertical-align: middle;
+    margin-right: 10px;
   }
 
   .list--header .list__sublist {
@@ -1315,8 +1253,12 @@ h2:after {
   .header__menu {
     display: none;
     position: absolute;
+    z-index: 3;
     top: calc(100% + 20px);
-    right: -15px;
+    right: -10px;
+    width: calc(100% + 20px);
+    overflow: auto;
+    box-shadow: 0 12px 10px 0.5px rgba(0, 0, 0, 0.1);
   }
 
   .header__menu.active {
@@ -1334,17 +1276,6 @@ h2:after {
     padding: 0 10px;
   }
 
-  .list__search {
-    min-width: 240px;
-    max-width: 240px;
-    height: 30px;
-    font-size: 16px;
-  }
-
-  .list--header {
-    height: calc(100% - 100px);
-  }
-
   .header {
     position: fixed;
     z-index: 2;
@@ -1354,10 +1285,7 @@ h2:after {
   }
 
   .header__menu {
-    right: -10px;
-    width: calc(100% + 20px);
     height: 100vh;
-    overflow: auto;
   }
 
   .footer {
@@ -1379,34 +1307,15 @@ h2:after {
   }
 
   .hero__bg {
-    height: 390px;
-    background-image: url("../img/banner-mob.jpg");
-    background-size: cover;
-    background-position: right center;
-  }
-
-  .hero__content {
-    top: 30px;
-    transform: none;
-  }
-
-  .hero__title {
-    font-size: 16px;
-  }
-
-  .hero__desc {
-    font-size: 10px;
-  }
-
-  .hero__btn {
-    font-size: 14px;
-    padding: 12px 20px;
+    height: 220px;
   }
 
   .navigation__content {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, minmax(120px, 150px));
     grid-gap: 8px;
+    max-width: 500px;
+    margin: 0 auto;
     height: auto;
   }
 
@@ -1452,25 +1361,7 @@ h2:after {
   }
 
   .banner {
-    height: 440px;
-    padding: 34px 0;
-    background-image: url("../img/banner2-mob.jpg");
-    background-position: bottom center;
-  }
-
-  .banner__desc {
-    font-size: 14px;
-  }
-
-  .banner__title {
-    font-size: 30px;
-  }
-
-  .banner__btn {
-    font-size: 14px;
-    min-width: 130px;
-    margin-top: 10px;
-    padding: 10px 15px;
+    height: 140px;
   }
 
   .specialOffer {
