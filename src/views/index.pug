@@ -1,0 +1,20 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+  - const title = "HairBox"
+  - const img = './img/'
+
+block content
+  +header
+  +hero
+  +navigation
+  +newProd
+  +banner
+  +specialOffer
+  +callback-small
+  +footer
+
+block scripts
+  script(src="js/main.js")
+  script(src="js/vendor.js")

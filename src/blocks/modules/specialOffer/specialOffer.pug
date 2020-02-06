@@ -1,0 +1,32 @@
+mixin specialOffer()
+  section.specialOffer
+    .container
+      h2.specialOffer__title Специальное предложение
+      ul.specialOffer__tabs
+        li.specialOffer__tab
+          a.specialOffer__tab-link(href="#") Все товары
+        li.specialOffer__tab
+          a.specialOffer__tab-link(href="#") Волосы
+        li.specialOffer__tab
+          a.specialOffer__tab-link(href="#") Тело
+        li.specialOffer__tab
+          a.specialOffer__tab-link(href="#") Лицо
+        li.specialOffer__tab
+          a.specialOffer__tab-link(href="#") Аксессуары
+      .specialOffer__products
+        -var i = 1;
+        while i < 9
+          .specialOffer__prod.prod
+            a.prod__link(href="#")
+              p.prod__sticker.prod__sticker--sale sale
+              .prod__photo-block
+                +img('product1.png', 'prod__photo')
+              p.prod__title Lorem, ipsum dolor.
+              p.prod__desc Lorem ipsum dolor sit amet.
+              .prod__price
+                p.prod__old-price 1341.00 руб.
+                p.prod__new-price 1340.00 руб.
+            a.prod__btn(href="#") В корзину
+            a.prod__favorites(href="#")
+              +img('icons/favorites.png', 'prod__icon')
+          -i++

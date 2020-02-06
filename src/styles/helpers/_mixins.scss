@@ -1,0 +1,16 @@
+@mixin transition($properties...) {
+	transition-property: $properties;
+	transition-duration: .4s;
+}
+
+@mixin tablet {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}

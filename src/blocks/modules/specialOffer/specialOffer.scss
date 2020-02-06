@@ -1,0 +1,41 @@
+.specialOffer {
+  padding: 60px 0;
+
+  @include mobile {
+    display: none;
+  }
+
+  &__tabs {
+    display: flex;
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__tab {
+    flex-grow: 1;
+    text-align: center;
+    border: 1px solid #f3f3f3;
+  }
+
+  &__tab-link {
+    @include transition(background-color, color);
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    text-decoration: none;
+
+    &:hover, &.active {
+      background-color: $color-m;
+      color: #fff;
+    }
+  }
+
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0%, 1fr));
+    grid-gap: 12px;
+    margin-top: 52px;
+  }
+}

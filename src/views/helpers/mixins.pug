@@ -1,0 +1,15 @@
+include ../../blocks/modules/header/header
+include ../../blocks/modules/hero/hero
+include ../../blocks/modules/navigation/navigation
+include ../../blocks/modules/newProd/newProd
+include ../../blocks/modules/banner/banner
+include ../../blocks/modules/specialOffer/specialOffer
+include ../../blocks/modules/callback-small/callback-small
+include ../../blocks/modules/footer/footer
+
+
+mixin img(name, className)
+	-var nameWebp = name.split('.')[0] + '.webp'
+	picture
+		source(srcset= img + nameWebp, type="image/webp")
+		img(src= img + name, class= className)

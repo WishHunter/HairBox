@@ -1,0 +1,39 @@
+.header {
+  position: relative;
+  background-color: #fff;
+  padding: 20px 0;
+
+  @include mobile {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__menu {
+    @include tablet {
+      display: none;
+      position: absolute;
+      top: calc(100% + 20px);
+      right: -15px;
+
+      &.active {
+        display: block;
+      }
+    }
+    @include mobile {
+      right: -10px;
+      width: calc(100% + 20px);
+      height: 100vh;
+      overflow: auto;
+    }
+  }
+}
