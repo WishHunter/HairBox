@@ -1,0 +1,16 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+  - const title = "О нас";
+  - const img = './img/'
+
+block content
+
+  +header
+  +about
+  +footer
+
+
+block scripts
+  script(src="js/main.js")

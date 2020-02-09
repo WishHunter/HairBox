@@ -1,0 +1,16 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+  - const title = "Политика конфиденциальности";
+  - const img = './img/'
+
+block content
+
+  +header
+  +privacy-policy
+  +footer
+
+
+block scripts
+  script(src="js/main.js")
