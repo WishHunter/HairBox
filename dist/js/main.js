@@ -119,6 +119,49 @@
 
 /***/ }),
 
+/***/ "./src/js/import/dropdown.js":
+/*!***********************************!*\
+  !*** ./src/js/import/dropdown.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function () {
+  var dropdownLinks = document.querySelectorAll('.js-dropdown');
+
+  if (!dropdownLinks) {
+    return;
+  }
+
+  openDropdawn(document.querySelector('.js-dropdown').parentElement);
+  Array.from(dropdownLinks).forEach(function (dropdownLink) {
+    dropdownLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      var parent = dropdownLink.parentElement;
+      console.log(parent);
+
+      if (parent.classList.contains('open')) {
+        closeDropdawn(parent);
+      } else {
+        openDropdawn(parent);
+      }
+    });
+  });
+
+  function openDropdawn(elem) {
+    elem.classList.add('open');
+    var thisBody = elem.querySelector('.dropdawn__body');
+    thisBody.style.height = thisBody.scrollHeight + 'px';
+  }
+
+  function closeDropdawn(elem) {
+    elem.classList.remove('open');
+    elem.querySelector('.dropdawn__body').style.height = '';
+  }
+})();
+
+/***/ }),
+
 /***/ "./src/js/import/modules.js":
 /*!**********************************!*\
   !*** ./src/js/import/modules.js ***!
@@ -264,6 +307,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_import_components__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _import_sublist__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./import/sublist */ "./src/js/import/sublist.js");
 /* harmony import */ var _import_sublist__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_import_sublist__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _import_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./import/dropdown */ "./src/js/import/dropdown.js");
+/* harmony import */ var _import_dropdown__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_import_dropdown__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 

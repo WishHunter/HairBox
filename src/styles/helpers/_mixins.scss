@@ -3,6 +3,10 @@
 	transition-duration: .4s;
 }
 
+@mixin shadow() {
+  box-shadow: 0 0 10px .5px rgba($color-m, 1);
+}
+
 @mixin tablet {
   @media (max-width: #{$desktop}) {
     @content;

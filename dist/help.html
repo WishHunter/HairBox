@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Помощь</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,500,700,900&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <div class="header__logo">
+            <picture>
+              <source srcset="./img/logo.webp" type="image/webp"/><img class="logo" src="./img/logo.png"/>
+            </picture>
+          </div>
+          <div class="header__menu">
+            <ul class="list list--header">
+              <li class="list__item">
+                <picture>
+                  <source srcset="./img/icons/catalog.webp" type="image/webp"/><img class="list__icon" src="./img/icons/catalog.png"/>
+                </picture><a class="list__link js-sublist" href="#catalog-list">Каталог</a>
+                <ul class="list__sublist" id="catalog-list">
+                  <li class="list__item"><a class="list__link" href="#">Все товары</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Sale</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Волосы</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Тело</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Лицо</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Аксессуары</a></li>
+                </ul>
+              </li>
+              <li class="list__item">
+                <picture>
+                  <source srcset="./img/icons/user.webp" type="image/webp"/><img class="list__icon" src="./img/icons/user.png"/>
+                </picture><a class="list__link" href="#">Личный кабинет</a>
+              </li>
+              <li class="list__item">
+                <picture>
+                  <source srcset="./img/icons/help.webp" type="image/webp"/><img class="list__icon" src="./img/icons/help.png"/>
+                </picture><a class="list__link" href="#">Помощь</a>
+              </li>
+              <li class="list__item">
+                <picture>
+                  <source srcset="./img/icons/contact.webp" type="image/webp"/><img class="list__icon" src="./img/icons/contact.png"/>
+                </picture><a class="list__link" href="#">Контакты</a>
+              </li>
+              <li class="list__item">
+                <picture>
+                  <source srcset="./img/icons/info.webp" type="image/webp"/><img class="list__icon" src="./img/icons/info.png"/>
+                </picture><a class="list__link" href="#">О нас</a>
+              </li>
+              <li class="list__item desktop-hidden">
+                <div class="list__input">
+                  <input class="list__search" type="text" placeholder="Поиск..."/>
+                  <picture>
+                    <source srcset="./img//icons/search.webp" type="image/webp"/><img class="list__icon" src="./img//icons/search.png"/>
+                  </picture>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="header__icons">
+            <ul class="list list--icons">
+              <li class="list__item desktop-only">
+                <div class="list__input">
+                  <input class="list__search" type="text" placeholder="Поиск..."/>
+                  <picture>
+                    <source srcset="./img//icons/search.webp" type="image/webp"/><img class="list__icon" src="./img//icons/search.png"/>
+                  </picture>
+                </div>
+              </li>
+              <li class="list__item"><a class="list__link js-openPopup" href="#user-popup">
+                  <picture>
+                    <source srcset="./img//icons/user.webp" type="image/webp"/><img class="list__icon" src="./img//icons/user.png"/>
+                  </picture></a></li>
+              <li class="list__item"><a class="list__link js-openPopup" href="#favorites-popup">
+                  <picture>
+                    <source srcset="./img//icons/favorites.webp" type="image/webp"/><img class="list__icon" src="./img//icons/favorites.png"/>
+                  </picture></a></li>
+              <li class="list__item"><a class="list__link js-dots" href="#">
+                  <picture>
+                    <source srcset="./img//icons/basket.webp" type="image/webp"/><img class="list__icon" src="./img//icons/basket.png"/>
+                  </picture>
+                  <div class="list__dot">3</div></a></li>
+              <li class="list__item desktop-hidden"><a class="burger list__burger js-mobMenu" href="#"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="faq">
+      <div class="container">
+        <div class="faq__flex">
+          <div class="faq__list">
+            <div class="dropdawn">
+              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Как сделать заказ?</a>
+                <div class="dropdawn__body">
+                  <p class="dropdawn__text">Выберите товары из каталога и поместите их в корзину, нажав на одноименную кнопку «В корзину» рядом с товаром. Можете использовать переключатели страниц внизу Каталога, чтобы увидеть весь ассортимент, а также выбирать фильтры поиска слева. Чтобы ознакомиться с подробной информацией о Товаре, находясь в Каталоге кликните на изображение товара. Выберите необходимый объем Товара или его цвет, если такой выбор предоставляется. Нажмите кнопку «Добавить в корзину», находясь в карточке Товара. Если Вы хотите продолжить покупки, Вам необходимо вернуться назад в Каталог и повторить перечисленные выше действия.</p>
+                  <p class="dropdawn__text">После того, как Вы выберете все необходимые товары, откройте Вашу корзину, нажав на ее изображение в верхнем правом углу любой страницы интернет-магазина, и нажмите кнопку «Оформить заказ». Далее следуйте указаниям системы. В корзине указана информация о вашем заказе: список товаров, количество выбранных товаров, общая стоимость всех выбранных товаров. Вы можете продолжить оформление заказа или изменить количество заказанных товаров, удалить товар, удалить все товары. При успешном оформлении в личном кабинете Вы увидите письмо на вашей почте с реквизитами для оплаты, подтверждающей Ваш заказ.</p>
+                </div>
+              </div>
+              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Сколько стоит доставка?</a>
+                <div class="dropdawn__body">
+                  <p class="dropdawn__text">Стоимость и сроки доставки зависят от выбранного Вами метода доставки и города, в который необходимо её осуществить:</p>
+                  <p class="dropdawn__text">Доставка по всей России курьерской службой СДЭК (бесплатно при заказе от 7000 руб.);</p>
+                  <p class="dropdawn__text">Доставка курьером по г.Санкт-Петербург в пределах КАД, стоимость 400р. (бесплатно при заказе от 4000 руб.);</p>
+                  <p class="dropdawn__text">Точная стоимость и срок доставки рассчитываются во время оформления заказа.</p>
+                </div>
+              </div>
+              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Как оплатить заказ?</a>
+                <div class="dropdawn__body">
+                  <p class="dropdawn__text">Оформление заказа предполагает предоплату. После подтверждения покупки Вы будете направлены на форму оплаты банковской картой. Вы можете оплатить заказ в течение суток. В случае отсутствия оплаты, бронь на товары и заказ отменяются.</p>
+                </div>
+              </div>
+              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Является ли ваша продукция оригинальной?</a>
+                <div class="dropdawn__body">
+                  <p class="dropdawn__text">Вся продукция, представленная в интернет-магазине Hair BOX является оригинальной и имеет сертификаты производителя. Мы с радостью предоставим их по Вашему запросу, отправленному на электронный адрес hairproductsdb@gmai.com</p>
+                </div>
+              </div>
+              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Есть ли у вас самовывоз?</a>
+                <div class="dropdawn__body">
+                  <p class="dropdawn__text">Самовывоз из пунктов выдачи - постаматов Iml. Стоимость рассчитывается во время оформления заказа.</p>
+                </div>
+              </div>
+              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Сколько будет идти заказ?</a>
+                <div class="dropdawn__body">
+                  <p class="dropdawn__text">Доставка по г.Санкт-Петербург осуществляется курьером в течении 1-2 рабочих дней после оплаты.</p>
+                  <p class="dropdawn__text">Сроки доставки в другие города указываются во время оформления заказа в подтверждающем письме (в среднем 5-10 дней) после отгрузки товара.</p>
+                  <p class="dropdawn__text">Выдача заказов из постаматов Iml производится в соответствии с графиком их работы.</p>
+                </div>
+              </div>
+              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Сколько может храниться заказ?</a>
+                <div class="dropdawn__body">
+                  <p class="dropdawn__text">Заказы, доставленные в пункты выдачи СДЭК хранятся бесплатно в течение 14ти дней. По истечении этого времени заказ отменяется и возвращается на склад.</p>
+                  <p class="dropdawn__text">Хранение посылки в пункте самовывоза Iml - 7 календарных дней после получения SMS-оповещения о приходе отправления на Пункт Выдачи Заказов. По истечении этого времени заказ отменяется и возвращается на склад.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq__form">
+            <form class="callback-form">
+              <h3 class="callback-form__title">Не нашли ответ на свой вопрос?</h3>
+              <h3 class="callback-form__title">напишите нам</h3>
+              <label class="callback-form__label"><span class="callback-form__desc">Имя</span>
+                <input class="callback-form__input" type="text" placeholder="Имя"/>
+              </label>
+              <label class="callback-form__label"><span class="callback-form__desc">E-mail</span>
+                <input class="callback-form__input" type="text" placeholder="Введите Ваш e-mail"/>
+              </label>
+              <label class="callback-form__label"><span class="callback-form__desc">Телефон</span>
+                <input class="callback-form__input" type="text" placeholder="+7(___)-___-__-__"/>
+              </label>
+              <label class="callback-form__label"><span class="callback-form__desc">Сообщение</span>
+                <textarea class="callback-form__textarea" name="" placeholder="Напишите свой вопрос"></textarea>
+              </label>
+              <label class="callback-form__label">
+                <input class="callback-form__checkbox" type="checkbox"/><span class="callback-form__desc callback-form__desc--small">я даю согласие на &#32;<a class="callback-form__link" href="#">обработку персональных данных</a></span>
+              </label>
+              <button class="main-btn callback-form__btn">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__col">
+            <ul class="footer__list footer__catalog">
+              <li class="footer__item"><a class="footer__link" href="#">Все товары</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Sale</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Волосы</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Тело</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Лицо</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Аксессуары</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <ul class="footer__list footer__menu">
+              <li class="footer__item"><a class="footer__link" href="#">Каталог</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Личный кабинет</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Помощь</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">О нас</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <ul class="footer__list footer__social">
+              <li class="footer__item">
+                <p class="footer__link footer__title">Контакты:</p>
+              </li>
+              <li class="footer__item"><a class="footer__link footer__number" href="#">+7 (915) 826-27-00</a></li>
+              <li class="footer__item"><a class="footer__link footer__email" href="#">hairproductsdb@gmail.com</a></li>
+              <li class="footer__item footer__grid"><a class="footer__link footer__soc-link" href="#">
+                  <picture>
+                    <source srcset="./img/icons/inst.webp" type="image/webp"/><img class="footer__soc-icon" src="./img/icons/inst.png"/>
+                  </picture></a><a class="footer__link footer__soc-link" href="#">
+                  <picture>
+                    <source srcset="./img/icons/vk.webp" type="image/webp"/><img class="footer__soc-icon" src="./img/icons/vk.png"/>
+                  </picture></a><a class="footer__link footer__soc-link" href="#">
+                  <picture>
+                    <source srcset="./img/icons/youtube.webp" type="image/webp"/><img class="footer__soc-icon" src="./img/icons/youtube.png"/>
+                  </picture></a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
