@@ -1,3 +1,141 @@
 .contact {
+  margin-top: 0;
+  &__hero {
+    height: 230px;
+    background-image: url('../img/bannerContacts.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
+    @include mobile {
+      height: 160px;
+    }
+  }
+
+  &__container {
+    padding: 60px 0;
+
+    @include mobile {
+      padding: 30px 0;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__form-block {
+    flex-basis: 50%;
+    max-width: 50%;
+
+    @include mobile {
+      max-width: none;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -10px 0;
+  }
+
+  &__input, &__textarea, &__btn {
+    margin: 10px 0;
+  }
+  &__input, &__textarea {
+    display: block;
+    flex-basis: 100%;
+    max-width: 100%;
+    border: 1px solid #f3f3f3;
+    opacity: .5;
+    padding: 10px;
+    font-size: 12px;
+    @include transition(opacity border);
+
+    &:hover, &:focus {
+      outline: none;
+      opacity: 1;
+      border-color: $color-m;
+    }
+  }
+
+  &__input {
+    &--small {
+      flex-basis: 48%;
+      max-width: 48%;
+
+      @include mobile {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__textarea {
+    height: 130px;
+    resize: none;
+
+    @include tablet {
+      height: 90px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    min-width: 141px;
+    margin: 20px auto 0;
+  }
+
+  &__info-block {
+    flex-basis: 41.6%;
+    max-width: 41.6%;
+
+    @include mobile {
+      max-width: none;
+    }
+  }
+
+  &__info {
+    border: 2px solid $color-m;
+    padding: 30px;
+
+    @include tablet {
+      font-size: 14px;
+      padding: 20px;
+    }
+
+    @include mobile {
+      padding: 20px 10px;
+    }
+  }
+
+  &__info-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    margin-left: 20px;
+    line-height: 1;
+    text-decoration: none;
+    @include transition(color);
+
+    &:hover {
+      color: $color-m;
+    }
+  }
+
+  &__info-desc {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
 }

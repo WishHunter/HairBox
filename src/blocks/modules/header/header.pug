@@ -3,7 +3,8 @@ mixin header()
     .container
       .header__container
         .header__logo
-          +img('logo.png', 'logo')
+          a(href="index.html")
+            +img('logo.png', 'logo')
         .header__menu
           ul.list.list--header
             li.list__item
@@ -30,10 +31,10 @@ mixin header()
               a.list__link(href="help.html") Помощь
             li.list__item
               +img('icons/contact.png', 'list__icon')
-              a.list__link(href="#") Контакты
+              a.list__link(href="contacts.html") Контакты
             li.list__item
               +img('icons/info.png', 'list__icon')
-              a.list__link(href="#") О нас
+              a.list__link(href="aboutUs.html") О нас
             li.list__item.desktop-hidden
               .list__input
                 input.list__search(type="text" placeholder="Поиск...")

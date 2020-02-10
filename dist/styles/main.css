@@ -1372,6 +1372,117 @@ h2:after {
   text-transform: uppercase;
 }
 
+.contact {
+  margin-top: 0;
+}
+
+.contact__hero {
+  height: 230px;
+  background-image: url("../img/bannerContacts.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.contact__container {
+  padding: 60px 0;
+}
+
+.contact__flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.contact__form-block {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.contact__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -10px 0;
+}
+
+.contact__input,
+.contact__textarea,
+.contact__btn {
+  margin: 10px 0;
+}
+
+.contact__input,
+.contact__textarea {
+  display: block;
+  flex-basis: 100%;
+  max-width: 100%;
+  border: 1px solid #f3f3f3;
+  opacity: .5;
+  padding: 10px;
+  font-size: 12px;
+  transition-property: opacity border;
+  transition-duration: .4s;
+}
+
+.contact__input:hover,
+.contact__input:focus,
+.contact__textarea:hover,
+.contact__textarea:focus {
+  outline: none;
+  opacity: 1;
+  border-color: #fcd1d5;
+}
+
+.contact__input--small {
+  flex-basis: 48%;
+  max-width: 48%;
+}
+
+.contact__textarea {
+  height: 130px;
+  resize: none;
+}
+
+.contact__btn {
+  display: block;
+  min-width: 141px;
+  margin: 20px auto 0;
+}
+
+.contact__info-block {
+  flex-basis: 41.6%;
+  max-width: 41.6%;
+}
+
+.contact__info {
+  border: 2px solid #fcd1d5;
+  padding: 30px;
+}
+
+.contact__info-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contact__link {
+  margin-left: 20px;
+  line-height: 1;
+  text-decoration: none;
+  transition-property: color;
+  transition-duration: .4s;
+}
+
+.contact__link:hover {
+  color: #fcd1d5;
+}
+
+.contact__info-desc {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
 @media (max-width: 1140px) {
   .container {
     max-width: 768px;
@@ -1505,6 +1616,15 @@ h2:after {
 
   .about__flex {
     align-items: center;
+  }
+
+  .contact__textarea {
+    height: 90px;
+  }
+
+  .contact__info {
+    font-size: 14px;
+    padding: 20px;
   }
 }
 
@@ -1683,6 +1803,36 @@ h2:after {
   .about__text-block {
     flex-basis: 100%;
     max-width: none;
+  }
+
+  .contact__hero {
+    height: 160px;
+  }
+
+  .contact__container {
+    padding: 30px 0;
+  }
+
+  .contact__flex {
+    display: block;
+  }
+
+  .contact__form-block {
+    max-width: none;
+    margin-bottom: 40px;
+  }
+
+  .contact__input--small {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .contact__info-block {
+    max-width: none;
+  }
+
+  .contact__info {
+    padding: 20px 10px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

@@ -30,11 +30,10 @@
     <header class="header">
       <div class="container">
         <div class="header__container">
-          <div class="header__logo">
-            <picture>
-              <source srcset="./img/logo.webp" type="image/webp"/><img class="logo" src="./img/logo.png"/>
-            </picture>
-          </div>
+          <div class="header__logo"><a href="index.html">
+              <picture>
+                <source srcset="./img/logo.webp" type="image/webp"/><img class="logo" src="./img/logo.png"/>
+              </picture></a></div>
           <div class="header__menu">
             <ul class="list list--header">
               <li class="list__item">
@@ -63,12 +62,12 @@
               <li class="list__item">
                 <picture>
                   <source srcset="./img/icons/contact.webp" type="image/webp"/><img class="list__icon" src="./img/icons/contact.png"/>
-                </picture><a class="list__link" href="#">Контакты</a>
+                </picture><a class="list__link" href="contacts.html">Контакты</a>
               </li>
               <li class="list__item">
                 <picture>
                   <source srcset="./img/icons/info.webp" type="image/webp"/><img class="list__icon" src="./img/icons/info.png"/>
-                </picture><a class="list__link" href="#">О нас</a>
+                </picture><a class="list__link" href="aboutUs.html">О нас</a>
               </li>
               <li class="list__item desktop-hidden">
                 <div class="list__input">
@@ -112,19 +111,25 @@
     <section class="contact">
       <div class="contact__hero"></div>
       <div class="container">
-        <h2 class="contact__title">Свяжитесь с нами</h2>
-        <div class="contact__flex">
-          <div class="contact__form-block">
-            <form class="contact__form" action="">
-              <input class="contact__input contact__input--small" type="text"/>
-              <input class="contact__input contact__input--small" type="text"/>
-              <input class="contact__input" type="text"/>
-              <textarea class="contact__textarea" name=""></textarea>
-              <button class="main-btn contact__button"></button>
-            </form>
-          </div>
-          <div class="contact__info-block">
-            <div class="contact__info"></div>
+        <div class="contact__container">
+          <h2 class="contact__title">Свяжитесь с нами</h2>
+          <div class="contact__flex">
+            <div class="contact__form-block">
+              <form class="contact__form" action="">
+                <input class="contact__input contact__input--small" type="text" placeholder="Имя"/>
+                <input class="contact__input contact__input--small" type="text" placeholder="Номер телефона"/>
+                <input class="contact__input" type="text" placeholder="E-mail"/>
+                <textarea class="contact__textarea" name="" placeholder="Сообщение"></textarea>
+                <button class="main-btn contact__btn">Отправить</button>
+              </form>
+            </div>
+            <div class="contact__info-block">
+              <div class="contact__info">
+                <div class="contact__info-line"><img class="contact__icon" src="./img/icons/phone.png" alt=""/><a class="contact__link" href="#">+7 (915) 826-27-00</a></div>
+                <div class="contact__info-line"><img class="contact__icon" src="./img/icons/mail.png" alt=""/><a class="contact__link" href="#">hairproductsdb@gmail.com</a></div>
+                <p class="contact__info-desc">Если у Вас возникли вопросы, то свяжитесь с нами удобным способом. Помогите нам стать лучше!</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -147,8 +152,8 @@
               <li class="footer__item"><a class="footer__link" href="#">Каталог</a></li>
               <li class="footer__item"><a class="footer__link" href="#">Личный кабинет</a></li>
               <li class="footer__item"><a class="footer__link" href="help.html">Помощь</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">О нас</a></li>
+              <li class="footer__item"><a class="footer__link" href="contacts.html">Контакты</a></li>
+              <li class="footer__item"><a class="footer__link" href="aboutUs.html">О нас</a></li>
             </ul>
           </div>
           <div class="footer__col">

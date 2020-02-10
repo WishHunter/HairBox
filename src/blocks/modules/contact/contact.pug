@@ -2,14 +2,22 @@ mixin contact()
   section.contact
     .contact__hero
     .container
-      h2.contact__title Свяжитесь с нами
-      .contact__flex
-        .contact__form-block
-          form.contact__form(action="")
-            input.contact__input.contact__input--small(type="text")
-            input.contact__input.contact__input--small(type="text")
-            input.contact__input(type="text")
-            textarea.contact__textarea(name="")
-            button.main-btn.contact__button
-        .contact__info-block
-          .contact__info
+      .contact__container
+        h2.contact__title Свяжитесь с нами
+        .contact__flex
+          .contact__form-block
+            form.contact__form(action="")
+              input.contact__input.contact__input--small(type="text" placeholder="Имя")
+              input.contact__input.contact__input--small(type="text" placeholder="Номер телефона")
+              input.contact__input(type="text" placeholder="E-mail")
+              textarea.contact__textarea(name="" placeholder="Сообщение")
+              button.main-btn.contact__btn Отправить
+          .contact__info-block
+            .contact__info
+              .contact__info-line
+                img.contact__icon(src="./img/icons/phone.png", alt="")
+                a.contact__link(href="#") +7 (915) 826-27-00
+              .contact__info-line
+                img.contact__icon(src="./img/icons/mail.png", alt="")
+                a.contact__link(href="#") hairproductsdb@gmail.com
+              p.contact__info-desc Если у Вас возникли вопросы, то свяжитесь с нами удобным способом. Помогите нам стать лучше!
