@@ -1,3 +1,58 @@
 .about {
+  margin: 0;
+  &__hero {
+    height: 230px;
+    background-image: url('../img/bannerAbout.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include mobile {
+      height: 160px;
+    }
+  }
+
+  &__flex {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 60px 0;
+
+    @include tablet {
+      align-items: center;
+    }
+
+    @include mobile {
+      padding: 30px 0;
+    }
+  }
+
+  &__img-block {
+    flex-basis: 30%;
+    flex-shrink: 1;
+    max-width: 30%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    flex-basis: 66.6%;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 66.6%;
+
+    @include mobile {
+      flex-basis: 100%;
+      max-width: none;
+    }
+  }
+
+  &__bold {
+    font-weight: 900;
+    text-transform: uppercase;
+  }
 
 }

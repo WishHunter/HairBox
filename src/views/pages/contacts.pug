@@ -1,0 +1,15 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+  - const title = "Контакты";
+  - const img = './img/'
+
+block content
+  +header
+  +contact
+  +footer
+
+
+block scripts
+  script(src="js/main.js")
