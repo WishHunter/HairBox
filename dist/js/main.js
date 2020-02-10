@@ -127,12 +127,11 @@
 /***/ (function(module, exports) {
 
 (function () {
-  var dropdownLinks = document.querySelectorAll('.js-dropdown');
-
-  if (!dropdownLinks) {
+  if (!document.querySelector('.js-dropdown')) {
     return;
   }
 
+  var dropdownLinks = document.querySelectorAll('.js-dropdown');
   openDropdawn(document.querySelector('.js-dropdown').parentElement);
   Array.from(dropdownLinks).forEach(function (dropdownLink) {
     dropdownLink.addEventListener('click', function (e) {
@@ -177,6 +176,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_footer_footer__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_footer_footer__WEBPACK_IMPORTED_MODULE_1__);
 
 
+
+/***/ }),
+
+/***/ "./src/js/import/popup.js":
+/*!********************************!*\
+  !*** ./src/js/import/popup.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function () {
+  var openPopupLinks = document.querySelectorAll('.js-openPopup');
+  var closePopupLinks = document.querySelectorAll('.js-close-popup');
+  Array.from(openPopupLinks).forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      if (document.querySelector('.popup.open')) {
+        document.querySelector('.popup.open').classList.remove('open');
+      }
+
+      var popupBlock = document.querySelector(link.getAttribute('href'));
+      popupBlock.classList.add('open');
+    });
+  });
+  Array.from(closePopupLinks).forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      if (e.target !== e.currentTarget) {
+        return;
+      }
+
+      var popupBlock = document.querySelector(link.dataset.popup);
+      popupBlock.classList.remove('open');
+    });
+  });
+})();
 
 /***/ }),
 
@@ -293,6 +328,36 @@ document.querySelector('.js-mobMenu').addEventListener('click', function (e) {
 
 /***/ }),
 
+/***/ "./src/js/import/tabs_login.js":
+/*!*************************************!*\
+  !*** ./src/js/import/tabs_login.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function () {
+  var tabsLogin = document.querySelectorAll('.js-tab-login');
+  Array.from(tabsLogin).forEach(function (tabLogin) {
+    tabLogin.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      if (tabLogin.classList.contains('disabled')) {
+        return;
+      }
+
+      var tabBlock = document.querySelector(tabLogin.getAttribute('href'));
+      var activeLink = document.querySelector('.login__link.disabled');
+      var activeBlock = document.querySelector('.login__content.active');
+      activeLink.classList.remove('disabled');
+      tabLogin.classList.add('disabled');
+      activeBlock.classList.remove('active');
+      tabBlock.classList.add('active');
+    });
+  });
+})();
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -309,6 +374,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_sublist__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_import_sublist__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _import_dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./import/dropdown */ "./src/js/import/dropdown.js");
 /* harmony import */ var _import_dropdown__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_import_dropdown__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _import_tabs_login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./import/tabs_login */ "./src/js/import/tabs_login.js");
+/* harmony import */ var _import_tabs_login__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_import_tabs_login__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _import_popup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./import/popup */ "./src/js/import/popup.js");
+/* harmony import */ var _import_popup__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_import_popup__WEBPACK_IMPORTED_MODULE_5__);
+
+
 
 
 

@@ -1,0 +1,40 @@
+mixin login()
+  .popup.login.js-close-popup#popup-login(data-popup="#popup-login")
+    .popup__container.login__container
+      .popup__close.js-close-popup(data-popup="#popup-login")
+      .login__tabs
+        .login__tab
+          a.login__link.disabled.js-tab-login(href="#login") Войти
+        .login__tab
+          a.login__link.js-tab-login(href="#registration") Регистрация
+
+      .login__content.login__login.active#login
+        form.login__form(action="")
+          input.login__input(type="text" placeholder="Введите ваш e-mail")
+          input.login__input(type="text" placeholder="Ваш пароль")
+          .login__text-right
+            a.login__link.login__link--small.js-tab-login(href="#forgotPass") Забыли пароль?
+          button.main-btn.login__btn Войти
+
+      .login__content.login__forgo#forgotPass
+        h3.login__title Забыли пароль?
+        p.login__text Пожалуйста, введите ваш адрес электронной почты (email) для восстановления пароля.
+        form.login__form(action="")
+          input.login__input(type="text" placeholder="Введите ваш e-mail")
+          button.main-btn.login__btn Войти
+
+      .login__content.login__registration#registration
+        form.login__form(action="")
+          input.login__input(type="text" placeholder="Введите ваши имя и фамилию")
+          input.login__input(type="text" placeholder="Введите ваш e-mail")
+          input.login__input(type="text" placeholder="Введите ваш пароль")
+          input.login__input(type="text" placeholder="Повторите ваш пароль")
+          label.login__label
+            input.login__checkbox(type="checkbox")
+            p.login__desc
+              | я даю согласие на&#32;
+              a.login__link(href="#") обработку персональных данных
+          label.login__label
+            input.login__checkbox(type="checkbox")
+            p.login__desc я хочу получать рассылку по e-mail
+          button.main-btn.login__btn Зарегистрироваться

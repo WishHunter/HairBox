@@ -10,10 +10,15 @@ include ../../blocks/modules/faq/faq
 include ../../blocks/modules/privacy-policy/privacy-policy
 include ../../blocks/modules/about/about
 include ../../blocks/modules/contact/contact
+include ../../blocks/modules/login/login
 
 
 mixin img(name, className)
-	-var nameWebp = name.split('.')[0] + '.webp'
-	picture
-		source(srcset= img + nameWebp, type="image/webp")
-		img(src= img + name, class= className)
+  -var nameWebp = name.split('.')[0] + '.webp'
+  picture
+    source(srcset= img + nameWebp, type="image/webp")
+    img(src= img + name, class= className)
+
+mixin svg(id, widthSVG, heightSVG, className)
+  svg(class= className height=heightSVG width=widthSVG)
+    use(xlink:href="./img/sprites/sprite.svg#" + id)

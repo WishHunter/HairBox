@@ -1,9 +1,10 @@
 (function () {
-  const dropdownLinks = document.querySelectorAll('.js-dropdown');
 
-  if (!dropdownLinks) {
+  if (!document.querySelector('.js-dropdown')) {
     return;
   }
+
+  const dropdownLinks = document.querySelectorAll('.js-dropdown');
 
   openDropdawn(document.querySelector('.js-dropdown').parentElement);
 

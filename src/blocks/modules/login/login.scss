@@ -1,0 +1,133 @@
+.login {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .6);
+  cursor: pointer;
+
+  &.open {
+    display: block;
+  }
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px 60px;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    cursor: default;
+
+    @include mobile {
+      width: 95%;
+      padding: 40px 20px;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    color: $color-m;
+    @include transition(color);
+
+    &:hover {
+      color: darken($color-m, 20%);
+      text-decoration: none;
+    }
+
+    &.disabled {
+      color: $color-d;
+      cursor: default;
+      text-decoration: none;
+    }
+
+    &--small {
+      font-size: 12px;
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: 1px solid $color-d;
+    padding: 10px;
+    font-size: 12px;
+    opacity: 0.3;
+    margin-bottom: 20px;
+    @include transition(opacity, border);
+
+    &:hover, &:focus {
+      outline: none;
+      border-color: $color-m;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  &__text-right {
+    text-align: right;
+  }
+
+  &__btn {
+    display: block;
+    min-width: 150px;
+    margin: 20px auto 0;
+  }
+
+  &__title {
+    font-family: "Montserrat";
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 20px 0;
+  }
+
+  &__label {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &__checkbox {
+    position: relative;
+    top: 2px;
+  }
+
+  &__desc {
+    margin: 0;
+    font-size: 12px;
+    margin-left: 8px;
+  }
+}

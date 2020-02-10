@@ -8,7 +8,7 @@ mixin header()
         .header__menu
           ul.list.list--header
             li.list__item
-              +img('icons/catalog.png', 'list__icon')
+              +svg('prod', '20', '20', 'list__icon')
               a.list__link.js-sublist(href="#catalog-list") Каталог
               ul.list__sublist#catalog-list
                 li.list__item
@@ -24,39 +24,40 @@ mixin header()
                 li.list__item
                   a.list__link(href="#") Аксессуары
             li.list__item
-              +img('icons/user.png', 'list__icon')
-              a.list__link(href="#") Личный кабинет
+              +svg('user', '20', '20', 'list__icon')
+              a.list__link(href="") Личный кабинет
             li.list__item
-              +img('icons/help.png', 'list__icon')
+              +svg('help', '20', '20', 'list__icon')
               a.list__link(href="help.html") Помощь
             li.list__item
-              +img('icons/contact.png', 'list__icon')
+              +svg('geo', '20', '20', 'list__icon')
               a.list__link(href="contacts.html") Контакты
             li.list__item
-              +img('icons/info.png', 'list__icon')
+              +svg('info', '20', '20', 'list__icon')
               a.list__link(href="aboutUs.html") О нас
             li.list__item.desktop-hidden
               .list__input
                 input.list__search(type="text" placeholder="Поиск...")
-                +img('/icons/search.png', 'list__icon')
+                +svg('search', '20', '20', 'list__icon')
         .header__icons
           ul.list.list--icons
             li.list__item.desktop-only
               .list__input
                 input.list__search(type="text" placeholder="Поиск...")
-                +img('/icons/search.png', 'list__icon')
+                +svg('search', '20', '20', 'list__icon')
             li.list__item
-              a.list__link.js-openPopup(href="#user-popup")
-                +img('/icons/user.png', 'list__icon')
+              a.list__link.js-openPopup(href="#popup-login")
+                +svg('user', '20', '20', 'list__icon')
             li.list__item
               a.list__link.js-openPopup(href="#favorites-popup")
-                +img('/icons/favorites.png', 'list__icon')
+                +svg('heart', '20', '20', 'list__icon')
             li.list__item
               a.list__link.js-dots(href="#")
-                +img('/icons/basket.png', 'list__icon')
+                +svg('basket', '20', '20', 'list__icon')
                 .list__dot 3
             li.list__item.desktop-hidden
               a.burger.list__burger.js-mobMenu(href="#")
                 span.burger__line
                 span.burger__line
                 span.burger__line
+  +login

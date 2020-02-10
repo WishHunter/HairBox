@@ -85,6 +85,7 @@ h2 {
   padding: 8px;
   text-align: center;
   color: #fff;
+  cursor: pointer;
   @include transition(background-color);
 
   &:hover {
@@ -160,5 +161,41 @@ h2 {
     font-size: 12px;
     color: #b4b4b4;
     text-decoration: none;
+  }
+}
+
+.popup{
+  &__container {
+    position: relative;
+  }
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #dedede;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 80%;
+      height: 1px;
+      background-color: #fff;
+      top: 50%;
+      left: 50%;
+      transform-origin: center center;
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
   }
 }
