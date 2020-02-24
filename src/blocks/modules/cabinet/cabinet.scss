@@ -1,0 +1,441 @@
+.cabinet {
+  &__flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__tabs {
+    flex-basis: 25%;
+    max-width: 25%;
+    list-style-type: none;
+    padding: 0;
+
+    @include tablet {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      max-width: none;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__tab {
+    padding-right: 20px;
+
+    @include tablet {
+      padding-right: 0;
+    }
+  }
+
+  &__tab-link {
+    @extend .list__link;
+
+    &.open {
+      @extend .list__link:hover;
+    }
+
+    @include tablet {
+      display: block;
+      text-decoration: none;
+      min-width: 115px;
+      border: 1px solid $color-g;
+      padding: 8px;
+      height: 100%;
+      text-align: center;
+      @include transition(background, color);
+
+      &.open, &:hover {
+        background-color: $color-m;
+        border-color: $color-m;
+        color: #fff;
+      }
+    }
+
+    @include mobile {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      min-width: 0;
+    }
+  }
+
+  &__tab-content {
+    display: none;
+    flex-basis: 75%;
+    max-width: 75%;
+
+    @include tablet {
+      max-width: none;
+    }
+
+    &.open {
+      display: block;
+    }
+  }
+}
+
+.cabinet-details {
+  flex-basis: 66.6%;
+  max-width: 66.6%;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+
+    &--checkbox {
+      justify-content: flex-start;
+
+      .cabinet-details__desc {
+        flex-basis: auto;
+        width: auto;
+        max-width: none;
+      }
+
+      .cabinet-details__input {
+        flex-basis: auto;
+        width: auto;
+        max-width: none;
+      }
+    }
+  }
+
+  &__desc {
+    display: block;
+    flex-basis: 25%;
+    max-width: 25%;
+    padding-right: 15px;
+    font-weight: 500;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__input {
+    @extend .card-product__input;
+    display: block;
+    margin-bottom: 0;
+    flex-basis: 75%;
+    max-width: 75%;
+
+    @include mobile {
+      flex-basis: auto;
+      max-width: none;
+    }
+  }
+
+  &__edit-adress, &__edit-password {
+    &.open {
+      .cabinet-details__dropdown-header::after {
+        transform: none;
+      }
+    }
+  }
+
+  &__dropdown-header {
+    @extend .dropdown__header;
+    display: block;
+    margin: 40px 0 26px;
+
+    @include mobile {
+      margin: 10px 0;
+    }
+  }
+
+  &__dropdown-body {
+    @extend .dropdown__body;
+  }
+
+  &__btn {
+    display: block;
+    min-width: 180px;
+    margin-left: auto;
+  }
+}
+
+.cabinet-favorites {
+  &__table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__row {
+    display: table-row;
+
+    &:last-of-type {
+      .cabinet-favorites__cell {
+        border: none;
+      }
+    }
+
+    @include mobile {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      border-bottom: 1px solid $color-g;
+      padding: 20px 0;
+    }
+  }
+
+  &__cell {
+    display: table-cell;
+    vertical-align: middle;
+    border-bottom: 1px solid $color-g;
+    padding: 20px 0;
+
+    @include mobile {
+      display: block;
+      border: none;
+      padding: 10px 0;
+    }
+  }
+
+  &__photo-cell {
+    @include mobile {
+      flex-basis: 40%;
+      max-width: 40%;
+    }
+  }
+
+  &__name-cell {
+    @include mobile {
+      display: flex;
+      flex-basis: 60%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 60%;
+      padding: 10px;
+    }
+  }
+
+  &__price-cell {
+    @include mobile {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
+
+  &__btn-cell {
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__delete-cell {
+    text-align: right;
+  }
+
+  &__photo {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  &__title {
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+
+  &__old-price {
+    @extend .prod__old-price;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  &__new-price {
+    @extend .prod__new-price;
+    margin: 0;
+  }
+
+  &__btn {
+    display: block;
+    min-width: 150px;
+    margin: 0 auto;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__delete {
+    font-size: 12px;
+    color: $color-g;
+    text-decoration: underline;
+
+    @include mobile {
+      font-size: 0;
+      position: absolute;
+      top: 10px;
+      right: 5px;
+      background-color: #dedede;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: 1px;
+        background-color: #fff;
+        transform-origin: center center;
+        transform: translate(-50%, -50%);
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
+}
+
+.cabinet-history {
+  &__table {
+    display: block;
+    width: 100%;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-g;
+    padding: 20px 0;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    &--header {
+      padding: 10px 0;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__cell {
+    text-align: center;
+
+    @include mobile {
+      padding: 10px 0;
+    }
+  }
+
+  &__prod-cell {
+    flex-basis: 44%;
+    max-width: 44%;
+  }
+
+  &__photo-cell {
+    flex-basis: 17%;
+    max-width: 17%;
+
+    @include mobile {
+      flex-basis: 40%;
+      max-width: 40%;
+    }
+  }
+
+  &__name-cell {
+    flex-basis: 27%;
+    max-width: 27%;
+
+    @include mobile {
+      display: flex;
+      flex-basis: 60%;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 60%;
+      padding: 10px;
+    }
+  }
+
+  &__price-cell {
+    flex-basis: 18%;
+    max-width: 18%;
+
+    @include mobile {
+      display: flex;
+      flex-basis: 50%;
+      justify-content: space-around;
+      max-width: 50%;
+    }
+  }
+
+  &__data-cell {
+    flex-basis: 18%;
+    max-width: 18%;
+
+    @include mobile {
+      flex-basis: 50%;
+      max-width: 50%;
+      text-align: center;
+    }
+  }
+
+  &__status-cell {
+    flex-basis: 20%;
+    max-width: 20%;
+
+    @include mobile {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__header-text {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  &__photo {
+    @extend .cabinet-favorites__photo;
+  }
+
+  &__title {
+    @extend .cabinet-favorites__title;
+    font-weight: 900;
+  }
+
+  &__old-price {
+    @extend .cabinet-favorites__old-price;
+
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+
+  &__new-price {
+    @extend .cabinet-favorites__new-price;
+  }
+
+  &__data {
+    margin: 0;
+  }
+
+  &__status {
+    margin: 0;
+  }
+}

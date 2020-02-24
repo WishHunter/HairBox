@@ -1,0 +1,15 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+  - const title = "Личный кабинет";
+  - const img = './img/'
+
+block content
+  +header
+  +cabinet
+  +footer
+
+
+block scripts
+  script(src="js/main.js")

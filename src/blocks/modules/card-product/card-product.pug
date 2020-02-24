@@ -1,0 +1,82 @@
+mixin card-product
+  section.card-product
+    .container
+      .card-product__flex
+        .card-product__photo-block
+          +img('product1.png', 'card-product__photo')
+          a.card-product__favorites(href="#")
+            +svg('heart', '20', '20', 'card-product__icon')
+        .card-product__general
+          h1.card-product__title Lorem, ipsum dolor
+          p.card-product__short-desc Lorem ipsum dolor sit amet consectetur
+          ul.card-product__short-compos
+            li.card-product__short-compos-item Lorem, ipsum dolor.
+            li.card-product__short-compos-item Lorem, ipsum dolor.
+            li.card-product__short-compos-item Lorem, ipsum dolor.
+          .card-product__table
+            .card-product__row
+              .card-product__cell Производитель:
+              .card-product__cell cutrin
+            .card-product__row
+              .card-product__cell Объем:
+              .card-product__cell 150 мл
+            .card-product__row
+              .card-product__cell Артикул:
+              .card-product__cell s04-128
+          .card-product__price-block
+            p.card-product__price-text Цена:
+            .card-product__old-price 666 р.
+            .card-product__new-price 665 р.
+          .card-product__amount-block
+            p.card-product__amount-text Колличество:
+            button.card-product__amount-down -
+            input.card-product__amount(type='text' value='1')
+            button.card-product__amount-up +
+          button.main-btn.card-product__general-btn Добавить в корзину
+
+      .card-product__tabs-block.js-tab-block
+        ul.card-product__tabs
+          li.card-product__tab
+            a.card-product__tab-link.open.js-tab-link(href="#desc") Описание
+          li.card-product__tab
+            a.card-product__tab-link.js-tab-link(href="#composition") Состав
+          li.card-product__tab
+            a.card-product__tab-link.js-tab-link(href="#reviews") Отзывы
+        .card-product__tab-content.open#desc
+          a(href="#").card-product__tab-header.js-dropdown-mobile Описание
+          .card-product__tab-body.js-dropdown__body
+            p.card-body__tab-text Маска смягчающая для чувствительной кожи головы без отдушки для нормальных и сухих волос VIENO Deep Soothening Care – это эффективное средство 2 в 1, позволяющее обеспечить полноценный уход и питание как ослабленным волосам, так и чувствительной коже головы. Ее уникальная эко-формула не содержит парабенов, искусственных отдушек, силикона и других, способных нанести вред, химических веществ. Высокая концентрация органического экстракта хлопка делает маску по-настоящему целебной. Она способствует выведению токсинов, прекрасно увлажняет и минерализирует, помогает убрать ломкость кончиков и тусклость прядей, ухаживает за кожей. Уже после 2-3 использований реконструируется естественный липидно-защитный слой кожных покровов, они избавляются от сухости, гиперчувствительности, зуда, а волосы становятся эластичнее и сильнее. В интернет-магазине "Галерея Косметики" вы можете купить CUTRIN Маска смягчающая для чувствительной кожи головы без отдушки для нормальных и сухих волос / VIENO Deep Soothening Care 150 мл недорого по цене 1040р.. Также ознакомьтесь с другими предложениям бренда CUTRIN.
+        .card-product__tab-content#composition
+          a(href="#").card-product__tab-header.js-dropdown-mobile Состав
+          .card-product__tab-body.js-dropdown__body
+            p.card-body__tab-text пэг-20 глицерилстеарат, хлопка экстракт, каприлил гликоль, стеарамидопропил диметиламин, лауриловый спирт, пэг-8, бегентримониум хлорид, диметикон, миристил эфир, глицерин стеарат цитрат, коко-глюкозид, бензойная кислота, этилгексил глицерин, сорбиновая кислота, цетеариловый спирт, аскорбил пальмитат, токоферол, феноксиэтанол, сополимер акрилатов, аскорбиновая кислота, калия сорбат, пропандиол, натрия цитрат, цитронеллол, стеариловый спирт, лимонная кислота, глицерин, вода.
+        .card-product__tab-content#reviews
+          a(href="#").card-product__tab-header.js-dropdown-mobile Отзывы
+          .card-product__tab-body.js-dropdown__body
+            form.card-product__form(action="")
+              input.card-product__input(type="text" placeholder='Имя')
+              textarea.card-product__textarea(placeholder='Отзыв')
+              .card-product__rating-block
+                p.card-product__rating-text Оценка
+                .card-product__stars
+                  - for (var x = 0; x < 5; x++)
+                    input.card-product__star(href="#" type="radio" name='stars' id='star'+x)
+                    label(for="star"+x)
+                      +svg('star', '15', '15', 'card-product__star-icon')
+              button.main-btn.card-product__btn Добавить отзыв
+
+            .card-product__reviews
+              .card-product__review
+                .card-product__review-info
+                  p.card-product__review-name Ксения
+                  - for (var x = 0; x < 5; x++)
+                    +svg('star', '15', '15', 'card-product__review-star-icon active')
+                p.card-product__review-text Влияние на мои пористые волосы, положительное. Волосы мягкие и послушные. С блеском у меня всегда туго. Его, больше, чем обычно не появилось. На следующий день, я заметила, что волосы такие же мягкие и эластичные, как и сразу после мытья головы и высушивания феном с разными кремами. Обычно, на второй день, волосы требуют масла.
+                p.card-product__review-data 23.10.2019
+              .card-product__review
+                .card-product__review-info
+                  p.card-product__review-name Ксения
+                  - for (var x = 0; x < 5; x++)
+                    +svg('star', '15', '15', 'card-product__review-star-icon active')
+                p.card-product__review-text Влияние на мои пористые волосы, положительное. Волосы мягкие и послушные. С блеском у меня всегда туго. Его, больше, чем обычно не появилось. На следующий день, я заметила, что волосы такие же мягкие и эластичные, как и сразу после мытья головы и высушивания феном с разными кремами. Обычно, на второй день, волосы требуют масла.
+                p.card-product__review-data 23.10.2019

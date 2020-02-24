@@ -1,0 +1,15 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+  - const title = "Продукт";
+  - const img = './img/'
+
+block content
+  +header
+  +card-product
+  +footer
+
+
+block scripts
+  script(src="js/main.js")

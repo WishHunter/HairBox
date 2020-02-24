@@ -1,0 +1,437 @@
+.card-product {
+
+  $this: &;
+
+  &__flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__photo-block {
+    display: flex;
+    flex-basis: 50%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 50%;
+    height: 550px;
+    padding: 40px;
+    box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.07);
+
+    @include mobile {
+      width: 300px;
+      max-width: none;
+      height: 300px;
+      margin: 0 auto 30px;
+    }
+  }
+
+  &__favorites {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+
+  &__photo {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__general {
+    flex-grow: 1;
+    width: auto;
+    padding-left: 95px;
+
+    @include mobile {
+      padding-left: 0;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 1.25;
+    font-weight: 900;
+    margin: 0;
+  }
+
+  &__short-desc {
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  &__short-compos {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__short-compos-item {
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  &__table {
+    display: table;
+    margin-bottom: 20px;
+  }
+
+  &__row {
+    display: table-row;
+  }
+
+  &__cell {
+    display: table-cell;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    font-weight: 500;
+
+    &:nth-of-type(1) {
+      font-weight: 900;
+    }
+  }
+
+  &__price-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 20px;
+  }
+
+  &__price-text {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__old-price {
+    font-weight: 700;
+    font-size: 20px;
+    color: $color-g;
+    text-decoration: line-through;
+    margin-right: 20px;
+  }
+
+  &__new-price {
+    font-weight: 900;
+    font-size: 24px;
+  }
+
+  &__amount-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__amount-text {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  &__amount-down, &__amount-up {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-m;
+    }
+  }
+
+  &__amount {
+    width: 50px;
+    padding: 4px;
+    text-align: center;
+  }
+
+  &__general-btn {
+    width: 100%;
+    padding: 12px;
+    font-weight: 900;
+  }
+
+  &__tabs-block {
+    margin-top: 60px;
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-bottom: 20px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__tab-link {
+    display: block;
+    text-decoration: none;
+    min-width: 115px;
+    border: 1px solid $color-g;
+    padding: 8px;
+    text-align: center;
+    @include transition(background, color);
+
+    &.open, &:hover {
+      background-color: $color-m;
+      border-color: $color-m;
+      color: #fff;
+    }
+  }
+
+  &__tab-content {
+    display: none;
+
+    @include mobile {
+      display: block;
+      margin: 20px 0;
+    }
+
+    &.open {
+      display: block;
+
+      #{$this}__tab-header::after {
+        transform: none;
+      }
+    }
+  }
+
+  &__tab-header {
+    display: none;
+
+    @include mobile {
+      display: block;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-family: Montserrat, sans-serif;
+      font-size: 16px;
+      @include transition(color);
+
+      &:hover {
+        color: $color-m;
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        width: 12px;
+        height: 7px;
+        margin-left: 10px;
+        background-image: url("../img/icons/arrow-up.png");
+        background-size: contain;
+        vertical-align: middle;
+        transform: rotate(180deg);
+        transform-origin: center center;
+        @include transition(transform);
+      }
+    }
+  }
+
+  &__tab-body {
+    @include mobile {
+      height: 0;
+      overflow: hidden;
+      @include transition(height);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    @include mobile {
+      display: block;
+      margin-top: 20px;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: 1px solid #7f7f7f;
+    opacity: .3;
+    padding: 8px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    @include transition(opacity, border-color);
+
+    @include mobile {
+      font-size: 16px;
+    }
+
+    &:focus {
+      outline: none;
+      opacity: 1;
+      border-color: $color-m;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    width: 100%;
+    height: 64px;
+    border: 1px solid #7f7f7f;
+    opacity: .3;
+    padding: 8px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    @include transition(opacity, border-color);
+
+    @include mobile {
+      font-size: 16px;
+    }
+
+    &:focus {
+      outline: none;
+      opacity: 1;
+      border-color: $color-m;
+    }
+  }
+
+  &__rating-text {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 12px;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__stars {
+    direction: rtl;
+
+    @include mobile {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  }
+
+  &__star {
+    display: none;
+
+    + label {
+
+
+      @include mobile {
+        margin-right: 5px;
+      }
+      &:hover, &:hover ~ label {
+        .card-product__star-icon {
+          fill: $color-m;
+        }
+      }
+    }
+
+    &:checked {
+      ~ label {
+        .card-product__star-icon {
+          fill: $color-m;
+        }
+      }
+    }
+  }
+
+  &__star-icon {
+    fill: #d9d9d9;
+    cursor: pointer;
+    @include transition(fill);
+
+    @include mobile {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__btn {
+    min-width: 180px;
+    padding: 12px;
+
+    @include mobile {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  &__review {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    box-shadow: 0 0 9px 1px rgba(0, 0, 0, 0.07);
+    min-height: 100px;
+    padding: 20px 16px;
+    margin-bottom: 20px;
+
+    @include mobile {
+      display: block;
+      padding-bottom: 48px;
+      box-shadow: none;
+      border-top: 1px solid $color-g;
+      border-bottom: 1px solid $color-g;
+      margin-bottom: 0;
+    }
+  }
+
+  &__review-info {
+    flex-basis: 16.6%;
+    flex-shrink: 0;
+    max-width: 16.6%;
+
+    @include mobile {
+      max-width: none;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__review-name {
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 10px;
+
+    @include mobile {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__review-star-icon {
+    fill: #d9d9d9;
+
+    @include mobile {
+      width: 15px;
+      height: 15px;
+    }
+
+    &.active {
+      fill: $color-m;
+    }
+  }
+
+  &__review-text {
+    margin: 0;
+  }
+
+  &__review-data {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    margin: 0;
+    font-size: 12px;
+    color: #c9c9c9;
+  }
+}

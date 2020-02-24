@@ -1,0 +1,88 @@
+mixin catalog
+  section.catalog
+    .container
+      .catalog__flex
+        .catalog__sidebar.js-sidebar
+          .mobile-only
+            .catalog__header
+              p.catalog__header-title Фильтры
+              .catalog__header-close.js-filters-close
+                span.catalog__header-close-line
+                span.catalog__header-close-line
+
+          input.catalog__search(type="text" placeholder="Поиск")
+
+          .catalog__sort
+            p.catalog__sort-title Сортировать по:
+            label.catalog__sort-label
+              input.catalog__sort-input(type="radio" name='sort' checked)
+              span.catalog__sort-name Наименованию
+            label.catalog__sort-label
+              input.catalog__sort-input(type="radio" name='sort')
+              span.catalog__sort-name Цене (от низкой к высокой)
+            label.catalog__sort-label
+              input.catalog__sort-input(type="radio" name='sort')
+              span.catalog__sort-name Цене (от высокой к низкой)
+
+          .catalog__categories
+            p.catalog__categories-title Сортировать по:
+            label.catalog__categories-label
+              input.checkbox.catalog__categories-input(type="checkbox" name='categories')
+              span.checkbox__desc.catalog__categories-name Все товары
+            label.catalog__categories-label
+              input.checkbox.catalog__categories-input(type="checkbox" name='categories')
+              span.checkbox__desc.catalog__categories-name Sale
+            label.catalog__categories-label
+              input.checkbox.catalog__categories-input(type="checkbox" name='categories')
+              span.checkbox__desc.catalog__categories-name Волосы
+            label.catalog__categories-label
+              input.checkbox.catalog__categories-input(type="checkbox" name='categories')
+              span.checkbox__desc.catalog__categories-name Тело
+            label.catalog__categories-label
+              input.checkbox.catalog__categories-input(type="checkbox" name='categories')
+              span.checkbox__desc.catalog__categories-name Лицо
+            label.catalog__categories-label
+              input.checkbox.catalog__categories-input(type="checkbox" name='categories')
+              span.checkbox__desc.catalog__categories-name Аксессуары
+
+          .catalog__brends
+            p.catalog__brends-title Бренды:
+            label.catalog__brends-label
+              input.checkbox.catalog__brends-input(type="checkbox" name='brends')
+              span.checkbox__desc.catalog__brends-name Все бренды
+            label.catalog__brends-label
+              input.checkbox.catalog__brends-input(type="checkbox" name='brends')
+              span.checkbox__desc.catalog__brends-name Бренд
+            label.catalog__brends-label
+              input.checkbox.catalog__brends-input(type="checkbox" name='brends')
+              span.checkbox__desc.catalog__brends-name Бренд
+            label.catalog__brends-label
+              input.checkbox.catalog__brends-input(type="checkbox" name='brends')
+              span.checkbox__desc.catalog__brends-name Бренд
+
+        .catalog__main
+          input.catalog__search.catalog__search--mobile(type="text" placeholder="Поиск")
+          button.main-btn.catalog__btn.catalog__btn--mobile.js-filters-open Фильтры
+          .catalog__grid
+            -var i = 1;
+            while i < 10
+              .catalog__prod.prod
+                a.prod__link(href="product.html")
+                  p.prod__sticker.prod__sticker--sale sale
+                  .prod__photo-block
+                    +img('product1.png', 'prod__photo')
+                  p.prod__title Lorem, ipsum dolor.
+                  p.prod__desc Lorem ipsum dolor sit amet.
+                  .prod__price
+                    p.prod__new-price 1340.00 руб.
+                a.prod__btn(href="placing-order.html") В корзину
+                a.prod__favorites(href="#")
+                  +img('icons/favorites.png', 'prod__icon')
+              -i++
+          .catalog__pages
+            +svg('arrow', '6px', '13px', 'catalog__pages-arrow catalog__pages-arrow--prev')
+            .catalog__pages-numbers
+              a.catalog__pages-number.active(href="#") 1
+              a.catalog__pages-number(href="#") 2
+              a.catalog__pages-number(href="#") 3
+            +svg('arrow', '6px', '13px', 'catalog__pages-arrow catalog__pages-arrow--next')

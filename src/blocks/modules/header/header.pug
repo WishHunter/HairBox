@@ -12,20 +12,20 @@ mixin header()
               a.list__link.js-sublist(href="#catalog-list") Каталог
               ul.list__sublist#catalog-list
                 li.list__item
-                  a.list__link(href="#") Все товары
+                  a.list__link(href="catalog.html") Все товары
                 li.list__item
-                  a.list__link(href="#") Sale
+                  a.list__link(href="catalog.html") Sale
                 li.list__item
-                  a.list__link(href="#") Волосы
+                  a.list__link(href="catalog.html") Волосы
                 li.list__item
-                  a.list__link(href="#") Тело
+                  a.list__link(href="catalog.html") Тело
                 li.list__item
-                  a.list__link(href="#") Лицо
+                  a.list__link(href="catalog.html") Лицо
                 li.list__item
-                  a.list__link(href="#") Аксессуары
+                  a.list__link(href="catalog.html") Аксессуары
             li.list__item
               +svg('user', '20', '20', 'list__icon')
-              a.list__link(href="") Личный кабинет
+              a.list__link(href="cabinet.html") Личный кабинет
             li.list__item
               +svg('help', '20', '20', 'list__icon')
               a.list__link(href="help.html") Помощь
@@ -49,10 +49,10 @@ mixin header()
               a.list__link.js-openPopup(href="#popup-login")
                 +svg('user', '20', '20', 'list__icon')
             li.list__item
-              a.list__link.js-openPopup(href="#favorites-popup")
+              a.list__link.js-openPopup(href="#popup-favorites")
                 +svg('heart', '20', '20', 'list__icon')
             li.list__item
-              a.list__link.js-dots(href="#")
+              a.list__link.js-dots(href="basket.html")
                 +svg('basket', '20', '20', 'list__icon')
                 .list__dot 3
             li.list__item.desktop-hidden
@@ -61,3 +61,4 @@ mixin header()
                 span.burger__line
                 span.burger__line
   +login
+  +favorites

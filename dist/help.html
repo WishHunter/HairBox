@@ -41,18 +41,18 @@
                   <use xlink:href="./img/sprites/sprite.svg#prod"></use>
                 </svg><a class="list__link js-sublist" href="#catalog-list">Каталог</a>
                 <ul class="list__sublist" id="catalog-list">
-                  <li class="list__item"><a class="list__link" href="#">Все товары</a></li>
-                  <li class="list__item"><a class="list__link" href="#">Sale</a></li>
-                  <li class="list__item"><a class="list__link" href="#">Волосы</a></li>
-                  <li class="list__item"><a class="list__link" href="#">Тело</a></li>
-                  <li class="list__item"><a class="list__link" href="#">Лицо</a></li>
-                  <li class="list__item"><a class="list__link" href="#">Аксессуары</a></li>
+                  <li class="list__item"><a class="list__link" href="catalog.html">Все товары</a></li>
+                  <li class="list__item"><a class="list__link" href="catalog.html">Sale</a></li>
+                  <li class="list__item"><a class="list__link" href="catalog.html">Волосы</a></li>
+                  <li class="list__item"><a class="list__link" href="catalog.html">Тело</a></li>
+                  <li class="list__item"><a class="list__link" href="catalog.html">Лицо</a></li>
+                  <li class="list__item"><a class="list__link" href="catalog.html">Аксессуары</a></li>
                 </ul>
               </li>
               <li class="list__item">
                 <svg class="list__icon" height="20" width="20">
                   <use xlink:href="./img/sprites/sprite.svg#user"></use>
-                </svg><a class="list__link" href="">Личный кабинет</a>
+                </svg><a class="list__link" href="cabinet.html">Личный кабинет</a>
               </li>
               <li class="list__item">
                 <svg class="list__icon" height="20" width="20">
@@ -93,11 +93,11 @@
                   <svg class="list__icon" height="20" width="20">
                     <use xlink:href="./img/sprites/sprite.svg#user"></use>
                   </svg></a></li>
-              <li class="list__item"><a class="list__link js-openPopup" href="#favorites-popup">
+              <li class="list__item"><a class="list__link js-openPopup" href="#popup-favorites">
                   <svg class="list__icon" height="20" width="20">
                     <use xlink:href="./img/sprites/sprite.svg#heart"></use>
                   </svg></a></li>
-              <li class="list__item"><a class="list__link js-dots" href="#">
+              <li class="list__item"><a class="list__link js-dots" href="basket.html">
                   <svg class="list__icon" height="20" width="20">
                     <use xlink:href="./img/sprites/sprite.svg#basket"></use>
                   </svg>
@@ -150,51 +150,111 @@
         </div>
       </div>
     </div>
+    <div class="popup favorites js-close-popup" id="popup-favorites" data-popup="#popup-favorites">
+      <div class="popup__container favorites__container">
+        <div class="popup__close js-close-popup" data-popup="#popup-favorites"></div>
+        <h2 class="favorites__title">Избранное</h2>
+        <div class="favorites__grid">
+          <div class="favorites__prod">
+            <div class="favorites__photo-block">
+              <picture>
+                <source srcset="./img/product1.webp" type="image/webp"/><img class="favorites__photo" src="./img/product1.png"/>
+              </picture>
+            </div>
+            <div class="favorites__desc">
+              <p class="favorites__prod-title">Lorem, ipsum dolor</p>
+              <p class="favorites__prod-desc">Lorem, ipsum dolor</p>
+              <div class="favorites__prod-price">
+                <p class="favorites__prod-old-price">666p</p>
+                <p class="favorites__prod-new-price">665p</p>
+              </div>
+              <button class="main-btn favorites__prod-btn">В корзину</button>
+            </div>
+            <div class="favorites__prod-delete"></div>
+          </div>
+          <div class="favorites__prod">
+            <div class="favorites__photo-block">
+              <picture>
+                <source srcset="./img/product1.webp" type="image/webp"/><img class="favorites__photo" src="./img/product1.png"/>
+              </picture>
+            </div>
+            <div class="favorites__desc">
+              <p class="favorites__prod-title">Lorem, ipsum dolor</p>
+              <p class="favorites__prod-desc">Lorem, ipsum dolor</p>
+              <div class="favorites__prod-price">
+                <p class="favorites__prod-old-price">666p</p>
+                <p class="favorites__prod-new-price">665p</p>
+              </div>
+              <button class="main-btn favorites__prod-btn">В корзину</button>
+            </div>
+            <div class="favorites__prod-delete"></div>
+          </div>
+          <div class="favorites__prod">
+            <div class="favorites__photo-block">
+              <picture>
+                <source srcset="./img/product1.webp" type="image/webp"/><img class="favorites__photo" src="./img/product1.png"/>
+              </picture>
+            </div>
+            <div class="favorites__desc">
+              <p class="favorites__prod-title">Lorem, ipsum dolor</p>
+              <p class="favorites__prod-desc">Lorem, ipsum dolor</p>
+              <div class="favorites__prod-price">
+                <p class="favorites__prod-old-price">666p</p>
+                <p class="favorites__prod-new-price">665p</p>
+              </div>
+              <button class="main-btn favorites__prod-btn">В корзину</button>
+            </div>
+            <div class="favorites__prod-delete"></div>
+          </div>
+        </div>
+        <button class="main-btn favorites__btn">Добавить все товары в корзину</button>
+      </div>
+    </div>
     <section class="faq">
       <div class="container">
         <div class="faq__flex">
           <div class="faq__list">
-            <div class="dropdawn">
-              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Как сделать заказ?</a>
-                <div class="dropdawn__body">
-                  <p class="dropdawn__text">Выберите товары из каталога и поместите их в корзину, нажав на одноименную кнопку «В корзину» рядом с товаром. Можете использовать переключатели страниц внизу Каталога, чтобы увидеть весь ассортимент, а также выбирать фильтры поиска слева. Чтобы ознакомиться с подробной информацией о Товаре, находясь в Каталоге кликните на изображение товара. Выберите необходимый объем Товара или его цвет, если такой выбор предоставляется. Нажмите кнопку «Добавить в корзину», находясь в карточке Товара. Если Вы хотите продолжить покупки, Вам необходимо вернуться назад в Каталог и повторить перечисленные выше действия.</p>
-                  <p class="dropdawn__text">После того, как Вы выберете все необходимые товары, откройте Вашу корзину, нажав на ее изображение в верхнем правом углу любой страницы интернет-магазина, и нажмите кнопку «Оформить заказ». Далее следуйте указаниям системы. В корзине указана информация о вашем заказе: список товаров, количество выбранных товаров, общая стоимость всех выбранных товаров. Вы можете продолжить оформление заказа или изменить количество заказанных товаров, удалить товар, удалить все товары. При успешном оформлении в личном кабинете Вы увидите письмо на вашей почте с реквизитами для оплаты, подтверждающей Ваш заказ.</p>
+            <div class="dropdown">
+              <div class="dropdown__list"><a class="dropdown__header js-dropdown" href="#">Как сделать заказ?</a>
+                <div class="dropdown__body js-dropdown__body">
+                  <p class="dropdown__text">Выберите товары из каталога и поместите их в корзину, нажав на одноименную кнопку «В корзину» рядом с товаром. Можете использовать переключатели страниц внизу Каталога, чтобы увидеть весь ассортимент, а также выбирать фильтры поиска слева. Чтобы ознакомиться с подробной информацией о Товаре, находясь в Каталоге кликните на изображение товара. Выберите необходимый объем Товара или его цвет, если такой выбор предоставляется. Нажмите кнопку «Добавить в корзину», находясь в карточке Товара. Если Вы хотите продолжить покупки, Вам необходимо вернуться назад в Каталог и повторить перечисленные выше действия.</p>
+                  <p class="dropdown__text">После того, как Вы выберете все необходимые товары, откройте Вашу корзину, нажав на ее изображение в верхнем правом углу любой страницы интернет-магазина, и нажмите кнопку «Оформить заказ». Далее следуйте указаниям системы. В корзине указана информация о вашем заказе: список товаров, количество выбранных товаров, общая стоимость всех выбранных товаров. Вы можете продолжить оформление заказа или изменить количество заказанных товаров, удалить товар, удалить все товары. При успешном оформлении в личном кабинете Вы увидите письмо на вашей почте с реквизитами для оплаты, подтверждающей Ваш заказ.</p>
                 </div>
               </div>
-              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Сколько стоит доставка?</a>
-                <div class="dropdawn__body">
-                  <p class="dropdawn__text">Стоимость и сроки доставки зависят от выбранного Вами метода доставки и города, в который необходимо её осуществить:</p>
-                  <p class="dropdawn__text">Доставка по всей России курьерской службой СДЭК (бесплатно при заказе от 7000 руб.);</p>
-                  <p class="dropdawn__text">Доставка курьером по г.Санкт-Петербург в пределах КАД, стоимость 400р. (бесплатно при заказе от 4000 руб.);</p>
-                  <p class="dropdawn__text">Точная стоимость и срок доставки рассчитываются во время оформления заказа.</p>
+              <div class="dropdown__list"><a class="dropdown__header js-dropdown" href="#">Сколько стоит доставка?</a>
+                <div class="dropdown__body js-dropdown__body">
+                  <p class="dropdown__text">Стоимость и сроки доставки зависят от выбранного Вами метода доставки и города, в который необходимо её осуществить:</p>
+                  <p class="dropdown__text">Доставка по всей России курьерской службой СДЭК (бесплатно при заказе от 7000 руб.);</p>
+                  <p class="dropdown__text">Доставка курьером по г.Санкт-Петербург в пределах КАД, стоимость 400р. (бесплатно при заказе от 4000 руб.);</p>
+                  <p class="dropdown__text">Точная стоимость и срок доставки рассчитываются во время оформления заказа.</p>
                 </div>
               </div>
-              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Как оплатить заказ?</a>
-                <div class="dropdawn__body">
-                  <p class="dropdawn__text">Оформление заказа предполагает предоплату. После подтверждения покупки Вы будете направлены на форму оплаты банковской картой. Вы можете оплатить заказ в течение суток. В случае отсутствия оплаты, бронь на товары и заказ отменяются.</p>
+              <div class="dropdown__list"><a class="dropdown__header js-dropdown" href="#">Как оплатить заказ?</a>
+                <div class="dropdown__body js-dropdown__body">
+                  <p class="dropdown__text">Оформление заказа предполагает предоплату. После подтверждения покупки Вы будете направлены на форму оплаты банковской картой. Вы можете оплатить заказ в течение суток. В случае отсутствия оплаты, бронь на товары и заказ отменяются.</p>
                 </div>
               </div>
-              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Является ли ваша продукция оригинальной?</a>
-                <div class="dropdawn__body">
-                  <p class="dropdawn__text">Вся продукция, представленная в интернет-магазине Hair BOX является оригинальной и имеет сертификаты производителя. Мы с радостью предоставим их по Вашему запросу, отправленному на электронный адрес hairproductsdb@gmai.com</p>
+              <div class="dropdown__list"><a class="dropdown__header js-dropdown" href="#">Является ли ваша продукция оригинальной?</a>
+                <div class="dropdown__body js-dropdown__body">
+                  <p class="dropdown__text">Вся продукция, представленная в интернет-магазине Hair BOX является оригинальной и имеет сертификаты производителя. Мы с радостью предоставим их по Вашему запросу, отправленному на электронный адрес hairproductsdb@gmai.com</p>
                 </div>
               </div>
-              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Есть ли у вас самовывоз?</a>
-                <div class="dropdawn__body">
-                  <p class="dropdawn__text">Самовывоз из пунктов выдачи - постаматов Iml. Стоимость рассчитывается во время оформления заказа.</p>
+              <div class="dropdown__list"><a class="dropdown__header js-dropdown" href="#">Есть ли у вас самовывоз?</a>
+                <div class="dropdown__body js-dropdown__body">
+                  <p class="dropdown__text">Самовывоз из пунктов выдачи - постаматов Iml. Стоимость рассчитывается во время оформления заказа.</p>
                 </div>
               </div>
-              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Сколько будет идти заказ?</a>
-                <div class="dropdawn__body">
-                  <p class="dropdawn__text">Доставка по г.Санкт-Петербург осуществляется курьером в течении 1-2 рабочих дней после оплаты.</p>
-                  <p class="dropdawn__text">Сроки доставки в другие города указываются во время оформления заказа в подтверждающем письме (в среднем 5-10 дней) после отгрузки товара.</p>
-                  <p class="dropdawn__text">Выдача заказов из постаматов Iml производится в соответствии с графиком их работы.</p>
+              <div class="dropdown__list"><a class="dropdown__header js-dropdown" href="#">Сколько будет идти заказ?</a>
+                <div class="dropdown__body js-dropdown__body">
+                  <p class="dropdown__text">Доставка по г.Санкт-Петербург осуществляется курьером в течении 1-2 рабочих дней после оплаты.</p>
+                  <p class="dropdown__text">Сроки доставки в другие города указываются во время оформления заказа в подтверждающем письме (в среднем 5-10 дней) после отгрузки товара.</p>
+                  <p class="dropdown__text">Выдача заказов из постаматов Iml производится в соответствии с графиком их работы.</p>
                 </div>
               </div>
-              <div class="dropdawn__list"><a class="dropdawn__header js-dropdown" href="#">Сколько может храниться заказ?</a>
-                <div class="dropdawn__body">
-                  <p class="dropdawn__text">Заказы, доставленные в пункты выдачи СДЭК хранятся бесплатно в течение 14ти дней. По истечении этого времени заказ отменяется и возвращается на склад.</p>
-                  <p class="dropdawn__text">Хранение посылки в пункте самовывоза Iml - 7 календарных дней после получения SMS-оповещения о приходе отправления на Пункт Выдачи Заказов. По истечении этого времени заказ отменяется и возвращается на склад.</p>
+              <div class="dropdown__list"><a class="dropdown__header js-dropdown" href="#">Сколько может храниться заказ?</a>
+                <div class="dropdown__body js-dropdown__body">
+                  <p class="dropdown__text">Заказы, доставленные в пункты выдачи СДЭК хранятся бесплатно в течение 14ти дней. По истечении этого времени заказ отменяется и возвращается на склад.</p>
+                  <p class="dropdown__text">Хранение посылки в пункте самовывоза Iml - 7 календарных дней после получения SMS-оповещения о приходе отправления на Пункт Выдачи Заказов. По истечении этого времени заказ отменяется и возвращается на склад.</p>
                 </div>
               </div>
             </div>
@@ -229,18 +289,18 @@
         <div class="footer__content">
           <div class="footer__col">
             <ul class="footer__list footer__catalog">
-              <li class="footer__item"><a class="footer__link" href="#">Все товары</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Sale</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Волосы</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Тело</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Лицо</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Аксессуары</a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Все товары</a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Sale</a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Волосы</a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Тело</a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Лицо</a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Аксессуары</a></li>
             </ul>
           </div>
           <div class="footer__col">
             <ul class="footer__list footer__menu">
-              <li class="footer__item"><a class="footer__link" href="#">Каталог</a></li>
-              <li class="footer__item"><a class="footer__link" href="#">Личный кабинет</a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Каталог</a></li>
+              <li class="footer__item"><a class="footer__link" href="cabinet.html">Личный кабинет</a></li>
               <li class="footer__item"><a class="footer__link" href="help.html">Помощь</a></li>
               <li class="footer__item"><a class="footer__link" href="contacts.html">Контакты</a></li>
               <li class="footer__item"><a class="footer__link" href="aboutUs.html">О нас</a></li>

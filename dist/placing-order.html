@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Оформление заказа</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Open+Sans:400,500,700,900&amp;display=swap&amp;subset=cyrillic" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <div class="header__logo"><a href="index.html">
+              <picture>
+                <source srcset="./img/logo.webp" type="image/webp"/><img class="logo" src="./img/logo.png"/>
+              </picture></a></div>
+          <div class="header__menu">
+            <ul class="list list--header">
+              <li class="list__item">
+                <svg class="list__icon" height="20" width="20">
+                  <use xlink:href="./img/sprites/sprite.svg#prod"></use>
+                </svg><a class="list__link js-sublist" href="#catalog-list">Каталог</a>
+                <ul class="list__sublist" id="catalog-list">
+                  <li class="list__item"><a class="list__link" href="catalog.html">Все товары</a></li>
+                  <li class="list__item"><a class="list__link" href="catalog.html">Sale</a></li>
+                  <li class="list__item"><a class="list__link" href="catalog.html">Волосы</a></li>
+                  <li class="list__item"><a class="list__link" href="catalog.html">Тело</a></li>
+                  <li class="list__item"><a class="list__link" href="catalog.html">Лицо</a></li>
+                  <li class="list__item"><a class="list__link" href="catalog.html">Аксессуары</a></li>
+                </ul>
+              </li>
+              <li class="list__item">
+                <svg class="list__icon" height="20" width="20">
+                  <use xlink:href="./img/sprites/sprite.svg#user"></use>
+                </svg><a class="list__link" href="cabinet.html">Личный кабинет</a>
+              </li>
+              <li class="list__item">
+                <svg class="list__icon" height="20" width="20">
+                  <use xlink:href="./img/sprites/sprite.svg#help"></use>
+                </svg><a class="list__link" href="help.html">Помощь</a>
+              </li>
+              <li class="list__item">
+                <svg class="list__icon" height="20" width="20">
+                  <use xlink:href="./img/sprites/sprite.svg#geo"></use>
+                </svg><a class="list__link" href="contacts.html">Контакты</a>
+              </li>
+              <li class="list__item">
+                <svg class="list__icon" height="20" width="20">
+                  <use xlink:href="./img/sprites/sprite.svg#info"></use>
+                </svg><a class="list__link" href="aboutUs.html">О нас</a>
+              </li>
+              <li class="list__item desktop-hidden">
+                <div class="list__input">
+                  <input class="list__search" type="text" placeholder="Поиск..."/>
+                  <svg class="list__icon" height="20" width="20">
+                    <use xlink:href="./img/sprites/sprite.svg#search"></use>
+                  </svg>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="header__icons">
+            <ul class="list list--icons">
+              <li class="list__item desktop-only">
+                <div class="list__input">
+                  <input class="list__search" type="text" placeholder="Поиск..."/>
+                  <svg class="list__icon" height="20" width="20">
+                    <use xlink:href="./img/sprites/sprite.svg#search"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="list__item"><a class="list__link js-openPopup" href="#popup-login">
+                  <svg class="list__icon" height="20" width="20">
+                    <use xlink:href="./img/sprites/sprite.svg#user"></use>
+                  </svg></a></li>
+              <li class="list__item"><a class="list__link js-openPopup" href="#popup-favorites">
+                  <svg class="list__icon" height="20" width="20">
+                    <use xlink:href="./img/sprites/sprite.svg#heart"></use>
+                  </svg></a></li>
+              <li class="list__item"><a class="list__link js-dots" href="basket.html">
+                  <svg class="list__icon" height="20" width="20">
+                    <use xlink:href="./img/sprites/sprite.svg#basket"></use>
+                  </svg>
+                  <div class="list__dot">3</div></a></li>
+              <li class="list__item desktop-hidden"><a class="burger list__burger js-mobMenu" href="#"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="popup login js-close-popup" id="popup-login" data-popup="#popup-login">
+      <div class="popup__container login__container">
+        <div class="popup__close js-close-popup" data-popup="#popup-login"></div>
+        <div class="login__tabs">
+          <div class="login__tab"><a class="login__link disabled js-tab-login" href="#login">Войти</a></div>
+          <div class="login__tab"><a class="login__link js-tab-login" href="#registration">Регистрация</a></div>
+        </div>
+        <div class="login__content login__login active" id="login">
+          <form class="login__form" action="">
+            <input class="login__input" type="text" placeholder="Введите ваш e-mail"/>
+            <input class="login__input" type="text" placeholder="Ваш пароль"/>
+            <div class="login__text-right"><a class="login__link login__link--small js-tab-login" href="#forgotPass">Забыли пароль?</a></div>
+            <button class="main-btn login__btn">Войти</button>
+          </form>
+        </div>
+        <div class="login__content login__forgo" id="forgotPass">
+          <h3 class="login__title">Забыли пароль?</h3>
+          <p class="login__text">Пожалуйста, введите ваш адрес электронной почты (email) для восстановления пароля.</p>
+          <form class="login__form" action="">
+            <input class="login__input" type="text" placeholder="Введите ваш e-mail"/>
+            <button class="main-btn login__btn">Войти</button>
+          </form>
+        </div>
+        <div class="login__content login__registration" id="registration">
+          <form class="login__form" action="">
+            <input class="login__input" type="text" placeholder="Введите ваши имя и фамилию"/>
+            <input class="login__input" type="text" placeholder="Введите ваш e-mail"/>
+            <input class="login__input" type="text" placeholder="Введите ваш пароль"/>
+            <input class="login__input" type="text" placeholder="Повторите ваш пароль"/>
+            <label class="login__label">
+              <input class="login__checkbox" type="checkbox"/>
+              <p class="login__desc">я даю согласие на&#32;<a class="login__link" href="#">обработку персональных данных</a></p>
+            </label>
+            <label class="login__label">
+              <input class="login__checkbox" type="checkbox"/>
+              <p class="login__desc">я хочу получать рассылку по e-mail</p>
+            </label>
+            <button class="main-btn login__btn">Зарегистрироваться</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup favorites js-close-popup" id="popup-favorites" data-popup="#popup-favorites">
+      <div class="popup__container favorites__container">
+        <div class="popup__close js-close-popup" data-popup="#popup-favorites"></div>
+        <h2 class="favorites__title">Избранное</h2>
+        <div class="favorites__grid">
+          <div class="favorites__prod">
+            <div class="favorites__photo-block">
+              <picture>
+                <source srcset="./img/product1.webp" type="image/webp"/><img class="favorites__photo" src="./img/product1.png"/>
+              </picture>
+            </div>
+            <div class="favorites__desc">
+              <p class="favorites__prod-title">Lorem, ipsum dolor</p>
+              <p class="favorites__prod-desc">Lorem, ipsum dolor</p>
+              <div class="favorites__prod-price">
+                <p class="favorites__prod-old-price">666p</p>
+                <p class="favorites__prod-new-price">665p</p>
+              </div>
+              <button class="main-btn favorites__prod-btn">В корзину</button>
+            </div>
+            <div class="favorites__prod-delete"></div>
+          </div>
+          <div class="favorites__prod">
+            <div class="favorites__photo-block">
+              <picture>
+                <source srcset="./img/product1.webp" type="image/webp"/><img class="favorites__photo" src="./img/product1.png"/>
+              </picture>
+            </div>
+            <div class="favorites__desc">
+              <p class="favorites__prod-title">Lorem, ipsum dolor</p>
+              <p class="favorites__prod-desc">Lorem, ipsum dolor</p>
+              <div class="favorites__prod-price">
+                <p class="favorites__prod-old-price">666p</p>
+                <p class="favorites__prod-new-price">665p</p>
+              </div>
+              <button class="main-btn favorites__prod-btn">В корзину</button>
+            </div>
+            <div class="favorites__prod-delete"></div>
+          </div>
+          <div class="favorites__prod">
+            <div class="favorites__photo-block">
+              <picture>
+                <source srcset="./img/product1.webp" type="image/webp"/><img class="favorites__photo" src="./img/product1.png"/>
+              </picture>
+            </div>
+            <div class="favorites__desc">
+              <p class="favorites__prod-title">Lorem, ipsum dolor</p>
+              <p class="favorites__prod-desc">Lorem, ipsum dolor</p>
+              <div class="favorites__prod-price">
+                <p class="favorites__prod-old-price">666p</p>
+                <p class="favorites__prod-new-price">665p</p>
+              </div>
+              <button class="main-btn favorites__prod-btn">В корзину</button>
+            </div>
+            <div class="favorites__prod-delete"></div>
+          </div>
+        </div>
+        <button class="main-btn favorites__btn">Добавить все товары в корзину</button>
+      </div>
+    </div>
+    <section class="placing-order">
+      <div class="container">
+        <h2 class="placing-order__title">Оформление заказа</h2>
+        <form class="placing-order__flex" action="">
+          <div class="placing-order__inputes-block">
+            <label class="placing-order__label"><span class="placing-order__desc placing-order__desc--required">Имя</span>
+              <input class="placing-order__input" type="text" placeholder="Имя" required="required"/>
+            </label>
+            <label class="placing-order__label"><span class="placing-order__desc placing-order__desc--required">Фамилия</span>
+              <input class="placing-order__input" type="text" placeholder="Фамилия" required="required"/>
+            </label>
+            <label class="placing-order__label"><span class="placing-order__desc placing-order__desc--required">E-mail</span>
+              <input class="placing-order__input" type="text" placeholder="E-mail" required="required"/>
+            </label>
+            <label class="placing-order__label"><span class="placing-order__desc placing-order__desc--required">Город</span>
+              <input class="placing-order__input" type="text" placeholder="Город" required="required"/>
+            </label>
+            <label class="placing-order__label"><span class="placing-order__desc placing-order__desc--required">Улица</span>
+              <input class="placing-order__input" type="text" placeholder="Улица" required="required"/>
+            </label>
+            <label class="placing-order__label"><span class="placing-order__desc placing-order__desc--required">Дом/строение</span>
+              <input class="placing-order__input" type="text" placeholder="Дом/строение" required="required"/>
+            </label>
+            <label class="placing-order__label"><span class="placing-order__desc">Квартира/офис</span>
+              <input class="placing-order__input" type="text" placeholder="Квартира/офис"/>
+            </label>
+            <label class="placing-order__label"><span class="placing-order__desc placing-order__desc--required">Телефон</span>
+              <input class="placing-order__input" type="text" placeholder="+7 (___) - ___-__-__" required="required"/>
+            </label>
+          </div>
+          <div class="placing-order__checkbox-block">
+            <h5 class="placing-order__subtitle">Выберите тип доставки</h5>
+            <label class="placing-order__label placing-order__label--checkbox">
+              <input class="checkbox placing-order__input" type="radio" name="delivery" checked="checked"/><span class="checkbox__desc placing-order__desc">Доставка до пункта выдачи</span>
+            </label>
+            <label class="placing-order__label placing-order__label--checkbox">
+              <input class="checkbox placing-order__input" type="radio" name="delivery"/><span class="checkbox__desc placing-order__desc">Доставка курьером</span>
+            </label>
+            <label class="placing-order__label placing-order__label--checkbox">
+              <input class="checkbox placing-order__input" type="radio" name="delivery"/><span class="checkbox__desc placing-order__desc">Доставка до офиса СДЭК</span>
+            </label>
+          </div>
+          <div class="placing-order__text-block">
+            <p class="placing-order__text">Уважаемый клиент, для успешного оформления заказа, Вам необходимо произвести предоплату. После нажатия кнопки “Оформить заказ” Вам будет направлено письмо на указанный e-mail с реквизитами для оплаты.</p>
+            <p class="placing-order__text">Если у Вас возникли трудности с оформлением заказа, позвоните нам по номеру +7 (915) 826-27-00</p>
+          </div><a class="main-btn placing-order__btn">Оформить заказ</a>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__col">
+            <ul class="footer__list footer__catalog">
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Все товары</a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Sale</a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Волосы</a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Тело</a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Лицо</a></li>
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Аксессуары</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <ul class="footer__list footer__menu">
+              <li class="footer__item"><a class="footer__link" href="catalog.html">Каталог</a></li>
+              <li class="footer__item"><a class="footer__link" href="cabinet.html">Личный кабинет</a></li>
+              <li class="footer__item"><a class="footer__link" href="help.html">Помощь</a></li>
+              <li class="footer__item"><a class="footer__link" href="contacts.html">Контакты</a></li>
+              <li class="footer__item"><a class="footer__link" href="aboutUs.html">О нас</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <ul class="footer__list footer__social">
+              <li class="footer__item">
+                <p class="footer__link footer__title">Контакты:</p>
+              </li>
+              <li class="footer__item"><a class="footer__link footer__number" href="#">+7 (915) 826-27-00</a></li>
+              <li class="footer__item"><a class="footer__link footer__email" href="#">hairproductsdb@gmail.com</a></li>
+              <li class="footer__item footer__grid"><a class="footer__link footer__soc-link" href="#">
+                  <svg class="footer__soc-icon" height="20" width="20">
+                    <use xlink:href="./img/sprites/sprite.svg#inst"></use>
+                  </svg></a><a class="footer__link footer__soc-link" href="#">
+                  <svg class="footer__soc-icon" height="20" width="20">
+                    <use xlink:href="./img/sprites/sprite.svg#vk"></use>
+                  </svg></a><a class="footer__link footer__soc-link" href="#">
+                  <svg class="footer__soc-icon" height="20" width="20">
+                    <use xlink:href="./img/sprites/sprite.svg#youtube"></use>
+                  </svg></a></li>
+              <li class="footer__item"><a class="footer__link" href="privacy.html">Политика конфиденциальности</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+mixin basket
+  section.basket
+    .container
+      h2.basket__title Корзина
+
+      .basket__table
+        .basket__row.basket__row--header
+          .basket__cell.basket__photo-cell
+            p.basket__header-text Товар
+          .basket__cell.basket__name-cell
+            p.basket__header-text Название
+          .basket__cell.basket__price-cell
+            p.basket__header-text Цена
+          .basket__cell.basket__number-cell
+            p.basket__header-text Количество
+          .basket__cell.basket__amount-cell
+            p.basket__header-text Итого
+
+        .basket__row
+          .basket__cell.basket__photo-cell
+            +img('product1.png', 'basket__photo')
+          .basket__cell.basket__name-cell
+            .basket__title Lorem, ipsum dolor
+            .basket__desc Lorem, ipsum dolor
+          .basket__cell.basket__price-cell
+            p.basket__old-price 666 руб.
+            p.basket__new-price 665 руб.
+          .basket__cell.basket__number-cell
+            .basket__number
+              .basket__number-arrow -
+              input.basket__number-input(type="text" value="1")
+              .basket__number-arrow +
+          .basket__cell.basket__amount-cell
+            p.basket__new-price 665 руб.
+
+        .basket__row
+          .basket__cell.basket__photo-cell
+            +img('product1.png', 'basket__photo')
+          .basket__cell.basket__name-cell
+            .basket__title Lorem, ipsum dolor
+            .basket__desc Lorem, ipsum dolor
+          .basket__cell.basket__price-cell
+            p.basket__old-price 666 руб.
+            p.basket__new-price 665 руб.
+          .basket__cell.basket__number-cell
+            .basket__number
+              .basket__number-arrow -
+              input.basket__number-input(type="text" value="1")
+              .basket__number-arrow +
+          .basket__cell.basket__amount-cell
+            p.basket__new-price 665 руб.
+
+      .basket__amount
+        p.basket__amount-text Итоговая стоимость:
+        p.basket__amount-price 160.00 $
+
+      button.main-btn.basket__btn Оформить заказ

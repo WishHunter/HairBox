@@ -1,0 +1,41 @@
+mixin favorites
+  .popup.favorites.js-close-popup#popup-favorites(data-popup="#popup-favorites")
+    .popup__container.favorites__container
+      .popup__close.js-close-popup(data-popup="#popup-favorites")
+      h2.favorites__title Избранное
+
+      .favorites__grid
+        .favorites__prod
+          .favorites__photo-block
+            +img('product1.png', 'favorites__photo')
+          .favorites__desc
+            p.favorites__prod-title Lorem, ipsum dolor
+            p.favorites__prod-desc Lorem, ipsum dolor
+            .favorites__prod-price
+              p.favorites__prod-old-price 666p
+              p.favorites__prod-new-price 665p
+            button.main-btn.favorites__prod-btn В корзину
+          .favorites__prod-delete
+        .favorites__prod
+          .favorites__photo-block
+            +img('product1.png', 'favorites__photo')
+          .favorites__desc
+            p.favorites__prod-title Lorem, ipsum dolor
+            p.favorites__prod-desc Lorem, ipsum dolor
+            .favorites__prod-price
+              p.favorites__prod-old-price 666p
+              p.favorites__prod-new-price 665p
+            button.main-btn.favorites__prod-btn В корзину
+          .favorites__prod-delete
+        .favorites__prod
+          .favorites__photo-block
+            +img('product1.png', 'favorites__photo')
+          .favorites__desc
+            p.favorites__prod-title Lorem, ipsum dolor
+            p.favorites__prod-desc Lorem, ipsum dolor
+            .favorites__prod-price
+              p.favorites__prod-old-price 666p
+              p.favorites__prod-new-price 665p
+            button.main-btn.favorites__prod-btn В корзину
+          .favorites__prod-delete
+      button.main-btn.favorites__btn Добавить все товары в корзину

@@ -3,8 +3,10 @@ let sublistLink = document.querySelectorAll('.js-sublist');
 class sublist {
   constructor(el) {
     this.el = el.parentElement;
-    // this.sublistBlock = document.querySelector(this.el.getAttribute('href'));
     this.sublistBlock = document.querySelector('#catalog-list');
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+    });
     if (window.innerWidth > 1139) {
       this.el.addEventListener('mouseover', () => {
         this.open();
@@ -14,7 +16,7 @@ class sublist {
       });
     } else {
       el.addEventListener('click', (e) => {
-        e.preventDefault();
+
         if (this.sublistBlock.style.display === 'block') {
           this.closeMob();
         } else {

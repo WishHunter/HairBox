@@ -1,0 +1,148 @@
+mixin cabinet()
+  section.cabinet
+    .container
+      h2.cabinet__title Личный кабинет
+      .cabinet__flex.js-tab-block
+        ul.cabinet__tabs
+          li.cabinet__tab
+            a.cabinet__tab-link.open.js-tab-link(href="#details") Мои данные
+          li.cabinet__tab
+            a.cabinet__tab-link.js-tab-link(href="#favorites") Избранное
+          li.cabinet__tab
+            a.cabinet__tab-link.js-tab-link(href="#history") История покупок
+
+        .cabinet__tab-content.cabinet-details.open#details
+          form.cabinet-details__form(action="#")
+            label.cabinet-details__label
+              span.cabinet-details__desc Имя
+              input.cabinet-details__input(type="text" placeholder='Имя')
+            label.cabinet-details__label
+              span.cabinet-details__desc Фамилия
+              input.cabinet-details__input(type="text" placeholder='Фамилия')
+            label.cabinet-details__label
+              span.cabinet-details__desc E-mail
+              input.cabinet-details__input(type="text" placeholder='E-mail')
+            label.cabinet-details__label
+              span.cabinet-details__desc Телефон
+              input.cabinet-details__input(type="text" placeholder='Телефон')
+            label.cabinet-details__label
+              span.cabinet-details__desc Instagram
+              input.cabinet-details__input(type="text" placeholder='Instagram')
+            label.cabinet-details__label.cabinet-details__label--checkbox
+              input.checkbox.cabinet-details__input(type="checkbox")
+              span.checkbox__desc.cabinet-details__desc я хочу получать рассылку по e-mail
+
+            .cabinet-details__edit-adress
+              a.cabinet-details__dropdown-header.js-dropdown(href='#') Изменить адрес
+              .cabinet-details__dropdown-body.js-dropdown__body
+                label.cabinet-details__label
+                  span.cabinet-details__desc Город
+                  input.cabinet-details__input(type="text" placeholder='Город')
+                label.cabinet-details__label
+                  span.cabinet-details__desc Улица
+                  input.cabinet-details__input(type="text" placeholder='Улица')
+                label.cabinet-details__label
+                  span.cabinet-details__desc Дом/строение
+                  input.cabinet-details__input(type="text" placeholder='Дом/строение')
+                label.cabinet-details__label
+                  span.cabinet-details__desc Квартира/офис
+                  input.cabinet-details__input(type="text" placeholder='Квартира/офис')
+
+            .cabinet-details__edit-password
+              a.cabinet-details__dropdown-header.js-dropdown(href='#') Изменить пароль
+              .cabinet-details__dropdown-body.js-dropdown__body
+                label.cabinet-details__label
+                  span.cabinet-details__desc Текущий пароль
+                  input.cabinet-details__input(type="passowrd" placeholder='Текущий пароль')
+                label.cabinet-details__label
+                  span.cabinet-details__desc Новый пароль
+                  input.cabinet-details__input(type="passowrd" placeholder='Новый пароль')
+                label.cabinet-details__label
+                  span.cabinet-details__desc Подтвердите новый пароль
+                  input.cabinet-details__input(type="passowrd" placeholder='Подтвердите новый пароль')
+
+            button.main-btn.cabinet-details__btn Сохранить
+
+        .cabinet__tab-content.cabinet-favorites#favorites
+          .cabinet-favorites__table
+            .cabinet-favorites__row
+              .cabinet-favorites__cell.cabinet-favorites__photo-cell
+                +img('product1.png', 'cabinet-favorites__photo')
+              .cabinet-favorites__cell.cabinet-favorites__name-cell
+                .cabinet-favorites__title Lorem, ipsum dolor
+                .cabinet-favorites__desc Lorem, ipsum dolor
+              .cabinet-favorites__cell.cabinet-favorites__price-cell
+                p.cabinet-favorites__old-price 666 руб.
+                p.cabinet-favorites__new-price 665 руб.
+              .cabinet-favorites__cell.cabinet-favorites__btn-cell
+                button.main-btn.cabinet-favorites__btn В корзину
+              .cabinet-favorites__cell.cabinet-favorites__delete-cell
+                a.cabinet-favorites__delete(href="#") Удалить
+
+            .cabinet-favorites__row
+              .cabinet-favorites__cell.cabinet-favorites__photo-cell
+                +img('product1.png', 'cabinet-favorites__photo')
+              .cabinet-favorites__cell.cabinet-favorites__name-cell
+                .cabinet-favorites__title Lorem, ipsum dolor
+                .cabinet-favorites__desc Lorem, ipsum dolor
+              .cabinet-favorites__cell.cabinet-favorites__price-cell
+                p.cabinet-favorites__old-price 666 руб.
+                p.cabinet-favorites__new-price 665 руб.
+              .cabinet-favorites__cell.cabinet-favorites__btn-cell
+                button.main-btn.cabinet-favorites__btn В корзину
+              .cabinet-favorites__cell.cabinet-favorites__delete-cell
+                a.cabinet-favorites__delete(href="#") Удалить
+
+            .cabinet-favorites__row
+              .cabinet-favorites__cell.cabinet-favorites__photo-cell
+                +img('product1.png', 'cabinet-favorites__photo')
+              .cabinet-favorites__cell.cabinet-favorites__name-cell
+                .cabinet-favorites__title Lorem, ipsum dolor
+                .cabinet-favorites__desc Lorem, ipsum dolor
+              .cabinet-favorites__cell.cabinet-favorites__price-cell
+                p.cabinet-favorites__old-price 666 руб.
+                p.cabinet-favorites__new-price 665 руб.
+              .cabinet-favorites__cell.cabinet-favorites__btn-cell
+                button.main-btn.cabinet-favorites__btn В корзину
+              .cabinet-favorites__cell.cabinet-favorites__delete-cell
+                a.cabinet-favorites__delete(href="#") Удалить
+          button.main-btn.main-btn--full.cabinet-favorites__btn Добавить все товары в корзину
+
+        .cabinet__tab-content.cabinet-history#history
+          .cabinet-history__table
+            .cabinet-history__row.cabinet-history__row--header
+              .cabinet-history__cell.cabinet-history__prod-cell
+                p.cabinet-history__header-text Товар
+              .cabinet-history__cell.cabinet-history__price-cell
+                p.cabinet-history__header-text Цена
+              .cabinet-history__cell.cabinet-history__data-cell
+                p.cabinet-history__header-text Дата
+              .cabinet-history__cell.cabinet-history__status-cell
+                p.cabinet-history__header-text Статус заказа
+            .cabinet-history__row
+              .cabinet-history__cell.cabinet-history__photo-cell
+                +img('product1.png', 'cabinet-history__photo')
+              .cabinet-history__cell.cabinet-history__name-cell
+                .cabinet-history__title Lorem, ipsum dolor
+                .cabinet-history__desc Lorem, ipsum dolor
+              .cabinet-history__cell.cabinet-history__price-cell
+                p.cabinet-history__old-price 666 руб.
+                p.cabinet-history__new-price 665 руб.
+              .cabinet-history__cell.cabinet-history__data-cell
+                p.cabinet-history__data 17.02.2020
+              .cabinet-history__cell.cabinet-history__status-cell
+                p.cabinet-history__status Ожидает оплаты
+
+            .cabinet-history__row
+              .cabinet-history__cell.cabinet-history__photo-cell
+                +img('product1.png', 'cabinet-history__photo')
+              .cabinet-history__cell.cabinet-history__name-cell
+                .cabinet-history__title Lorem, ipsum dolor
+                .cabinet-history__desc Lorem, ipsum dolor
+              .cabinet-history__cell.cabinet-history__price-cell
+                p.cabinet-history__old-price 666 руб.
+                p.cabinet-history__new-price 665 руб.
+              .cabinet-history__cell.cabinet-history__data-cell
+                p.cabinet-history__data 17.02.2020
+              .cabinet-history__cell.cabinet-history__status-cell
+                p.cabinet-history__status Ожидает оплаты

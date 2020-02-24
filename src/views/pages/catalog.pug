@@ -1,0 +1,15 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+  - const title = "Каталог";
+  - const img = './img/'
+
+block content
+  +header
+  +catalog
+  +footer
+
+
+block scripts
+  script(src="js/main.js")
