@@ -137,7 +137,7 @@
   &__edit-adress, &__edit-password {
     &.open {
       .cabinet-details__dropdown-header::after {
-        transform: none;
+        transform: rotate(90deg);
       }
     }
   }

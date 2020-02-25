@@ -43,7 +43,7 @@
 
     &.open {
       #{$this}__header::after {
-        transform: none;
+        transform: rotate(90deg);
       }
     }
   }
@@ -68,13 +68,14 @@
       display: inline-block;
       position: relative;
       top: -2px;
-      width: 12px;
-      height: 7px;
-      margin-left: 10px;
-      background-image: url("../img/icons/arrow-up.png");
+      width: 9px;
+      height: 15px;
+      margin-left: 15px;
+      background-image: url("../img/arrow.svg");
+      background-repeat: no-repeat;
       background-size: contain;
       vertical-align: middle;
-      transform: rotate(180deg);
+      transform: rotate(270deg);
       transform-origin: center center;
       @include transition(transform);
     }
@@ -134,17 +135,19 @@
 
   &__input, &__textarea {
     width: 100%;
-    border: 1px solid #f3f3f3;
+    border: 1px solid $color-g;
     font-size: 12px;
     font-weight: 500;
     padding: 10px;
-    opacity: .5;
-    @include transition(shadow border);
+    @include transition(border);
 
     &:focus {
       border-color: $color-m;
       outline: none;
-      opacity: 1;
+    }
+
+    &::placeholder {
+      color: $color-g;
     }
   }
 

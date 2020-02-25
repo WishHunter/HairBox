@@ -201,7 +201,7 @@
       display: block;
 
       #{$this}__tab-header::after {
-        transform: none;
+        transform: rotate(90deg);
       }
     }
   }
@@ -227,13 +227,13 @@
         display: inline-block;
         position: relative;
         top: -2px;
-        width: 12px;
-        height: 7px;
-        margin-left: 10px;
-        background-image: url("../img/icons/arrow-up.png");
+        width: 9px;
+        height: 15px;
+        margin-left: 15px;
+        background-image: url("../img/arrow.svg");
         background-size: contain;
         vertical-align: middle;
-        transform: rotate(180deg);
+        transform: rotate(270deg);
         transform-origin: center center;
         @include transition(transform);
       }

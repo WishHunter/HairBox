@@ -54,16 +54,18 @@
     display: block;
     flex-basis: 100%;
     max-width: 100%;
-    border: 1px solid #f3f3f3;
-    opacity: .5;
+    border: 1px solid $color-g;
     padding: 10px;
     font-size: 12px;
-    @include transition(opacity border);
+    @include transition(border);
 
     &:hover, &:focus {
       outline: none;
-      opacity: 1;
       border-color: $color-m;
+    }
+
+    &::placeholder {
+      color: $color-g;
     }
   }
 
