@@ -126,8 +126,13 @@
   }
 
   &__desc {
+    display: inline;
     margin: 0;
     font-size: 12px;
-    margin-left: 8px;
+
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 }

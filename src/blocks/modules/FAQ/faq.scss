@@ -120,10 +120,15 @@
     display: inline-block;
 
     &--small {
+      display: inline;
       font-size: 12px;
       margin-bottom: 0;
-      vertical-align: middle;
-      display: inline;
+      align-items: center;
+
+      &:before {
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
   }
 
@@ -146,14 +151,6 @@
   &__textarea {
     resize: none;
     height: 80px;
-  }
-
-  &__checkbox {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 8px;
-    position: relative;
-    top: 2px;
   }
 
   &__link {

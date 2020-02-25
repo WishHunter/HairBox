@@ -30,11 +30,11 @@ mixin login()
           input.login__input(type="text" placeholder="Введите ваш пароль")
           input.login__input(type="text" placeholder="Повторите ваш пароль")
           label.login__label
-            input.login__checkbox(type="checkbox")
-            p.login__desc
+            input.checkbox.login__checkbox(type="checkbox")
+            p.checkbox__desc.login__desc
               | я даю согласие на&#32;
               a.login__link(href="#") обработку персональных данных
           label.login__label
-            input.login__checkbox(type="checkbox")
-            p.login__desc я хочу получать рассылку по e-mail
+            input.checkbox.login__checkbox(type="checkbox")
+            p.checkbox__desc.login__desc я хочу получать рассылку по e-mail
           button.main-btn.login__btn Зарегистрироваться

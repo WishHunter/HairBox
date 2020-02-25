@@ -61,6 +61,10 @@
       align-items: center;
       font-size: 14px;
       min-width: 0;
+
+      &:before {
+        display: none;
+      }
     }
   }
 
@@ -93,15 +97,14 @@
       justify-content: flex-start;
 
       .cabinet-details__desc {
+        display: flex;
         flex-basis: auto;
         width: auto;
         max-width: none;
       }
 
       .cabinet-details__input {
-        flex-basis: auto;
-        width: auto;
-        max-width: none;
+        display: none;
       }
     }
   }
